@@ -47,10 +47,6 @@ hr {
     letter-spacing: 3px;
 }
 
-.img-full {
-    min-width: 100%;
-}
-
 .brand-before,
 .brand-name {
     text-transform: capitalize;
