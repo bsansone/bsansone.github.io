@@ -7,7 +7,13 @@
 	<meta name="description" content="Brandon Sansone, IT professional and all things computer related, is a graduate of the Illinois Institute of Technology, receiving his Bachelor's degree in Information Technology & Management in May 2016. ">
 	<meta name="author" content="Brandon Sansone">
 
-	<!-- <title>Brandon Sansone</title> -->
+	<title>
+		{% if page.title %}
+		{{ page.title }}
+		{% else %}
+		Brandon Sansone
+		{% endif %}
+	</title>
 
 	<!-- Bootstrap Core CSS -->
 	<link href="/css/bootstrap.min.css" rel="stylesheet">
