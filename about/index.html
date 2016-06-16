@@ -1,59 +1,82 @@
----
-layout: default
-title: About | Brandon Sansone
-heading: About
----
-<div class="container">
+<!DOCTYPE html>
+<html lang="en">
 
-    <div class="row">
-        <div class="box">
-            <div class="col-lg-12">
-                <hr>
-                <h2 class="intro-text text-center">{{ page.heading }}
-                </h2>
-                <hr>
-            </div>
-            <div class="col-md-4">
-            <img class="img-responsive img-border" src="/assets/img/me.jpg" alt="">
-            </div>
-            <div class="col-md-8">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <title>brandon sansone</title>
+
+    <!-- Bootstrap CSS -->
+    <link href="/assets/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link href="/assets/css/styles.css" rel="stylesheet">
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
+
+<body>
+    <div class="brand text-center">
+        <h1>brandon sansone</h1>
+    </div>
+    <nav class="navbar navbar-default" role="navigation">
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse navbar-ex1-collapse">
+            <ul class="nav navbar-nav">
+                <li><a href="/">home</a></li>
+                <li><a href="/about/">about</a></li>
+                <li><a href="/resume/">resume</a></li>
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">projects <b class="caret"></b></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="#">Option 1</a></li>
+                        <li><a href="#">Option 2</a></li>
+                        <li><a href="#">Option 3</a></li>
+                        <li><a href="#">Option 4</a></li>
+                    </ul>
+                </li>
+                <li><a href="/contact/">contact</a></li>
+            </ul>
+        </div>
+        <!-- /.navbar-collapse -->
+    </nav>
+    <div class="container">
+        <div class="row">
+            <h3>X:</h3>
+            <div class="col-lg-12 text-left">
                 <p>Brandon Sansone, IT professional and enthusiast of all things computer related, is a graduate of the <a href="http://web.iit.edu/">Illinois Institute of Technology</a>, receiving his Bachelor's degree in Information Technology & Management in May 2016. </p>
                 <p>He is excited for this next part of his life where he ventures into the industry and hopes to be able to share his passion and knowledge of IT in whatever environment that presents him. </p>
-                <p><i>Specializations: Web Development, System Administration, Cybersecurity </i></p>
+                <p><em>Specializations: Web Development, System Administration, Cybersecurity </em></p>
+
             </div>
-            <div class="clearfix"></div>
+        </div>
+        <div class="row">
+            <h3>Y:</h3>
+            <div class="col-lg-12 text-left">
+                <p>Working out, playing sports and especially lifting weights is a big hobby and interest in my life at the moment. Having just started lifting at the beginning of summer 2015 and having a goal to gain 15 pounds from where I was at, which I accomplished! I hope to see more progress and change in myself the upcoming summer while I continue this new hobby.</p>
+
+            </div>
+        </div>
+        <div class="row">
+            <h3>Z:</h3>
+            <div class="col-lg-12 text-left">
+                <p>A interest of mine that I've had since as long as I can remember is video games, specifically PC games and in the last few years...<a href="http://na.leagueoflegends.com/">League of Legends</a>. I've been playing this game since a little after beta and have made tons of friends and learned a ton about teamwork and strategy. After climbing the ranks from lowly bronze tier in season 1 to reaching almost master tier in season 4, I have learned a lot and enjoyed every minute of it, even with all the feeders...</p>
+
+            </div>
         </div>
     </div>
 
-    <div class="row">
-        <div class="box">
-            <div class="col-md-12 text-center">
-                <hr>
-                <h2 class="intro-text">Hobbies & Interests
-                </h2>
-                <hr>
-                <div class="col-md-4">
-                    <img class="img-responsive" src="/assets/img/fit.jpg" alt="">
-                </div>
-                <div class="col-md-8 text-left">
-                    <p>
-                        Working out, playing sports and especially lifting weights is a big hobby and interest in my life at the moment. Having just started lifting at the beginning of summer 2015 and having a goal to gain 15 pounds from where I was at, which I accomplished! I hope to see more progress and change in myself the upcoming summer while I continue this new hobby.    
-                    </p>
-                </div>
-            </div>
-            <div class="col-md-12 text-center">
-                <div class="col-md-8 text-left">
-                <br>
-                    <p>
-                        A interest of mine that I've had since as long as I can remember is video games, specifically PC games and in the last few years...<a href="http://na.leagueoflegends.com/">League of Legends</a>. I've been playing this game since a little after beta and have made tons of friends and learned a ton about teamwork and strategy. After climbing the ranks from lowly bronze tier in season 1 to reaching almost master tier in season 4, I have learned a lot and enjoyed every minute of it, even with all the feeders...
-                    </p>
-                </div>
-                <div class="col-md-4">
-                <br>
-                    <img class="img-responsive" src="/assets/img/lol.png" alt="">
-                </div>
-            </div>
-        </div>
-    </div>    
-</div>
-    <!-- /.container -->
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="/assets/js/bootstrap.min.js"></script>
+</body>
+
+</html>
