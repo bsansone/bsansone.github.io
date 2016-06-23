@@ -34,15 +34,13 @@
     .navbar .navbar-nav {
         display: inline-block;
         float: none;
-    }
-    
-    .navbar .navbar-collapse {
         text-align: center;
     }
     
     .navbar-default {
         background-color: #252120;
         border-color: #252120;
+        text-align: center;
     }
     
     .navbar-default .navbar-nav > li > a {
@@ -116,4 +114,15 @@
         color: #fff;
         background-color: #252120;
         border-color: #252120;
+    }
+    
+    @media (max-width: 767px) {
+        .navbar-default .navbar-nav .open .dropdown-menu > li > a {
+            color: #fff;
+        }
+        .navbar-default .navbar-nav .open .dropdown-menu > li > a:hover {
+            color: #A92F41;
+            text-decoration: none;
+            background-color: #252120;
+        }
     }
