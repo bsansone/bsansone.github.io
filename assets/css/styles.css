@@ -17,6 +17,16 @@
         color: #91C7A9;
     }
     
+    blockquote {
+        font-size: inherit;
+        display: block;
+        border-color: #252120;
+        margin-top: 1em;
+        margin-bottom: 1em;
+        margin-left: 40px;
+        margin-right: 40px;
+    }
+    
     .underCon {
         color: #E5DFC5;
     }
