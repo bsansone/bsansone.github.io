@@ -27,6 +27,16 @@
         margin-right: 40px;
     }
     
+    pre {
+        background: #252120;
+        color: #fff;
+        border-color: #252120;
+    }
+    
+    #intro_div {
+        max-width: 800px;
+    }
+    
     .underCon {
         color: #E5DFC5;
     }
