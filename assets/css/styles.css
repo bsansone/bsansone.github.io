@@ -9,11 +9,12 @@
         border-color: #fff;
     }
     
-    a {
-        color: #91C7A9;
-    }
-    
-    a:hover {
+    a,
+    a:hover,
+    .btn-link,
+    .btn-link:hover,
+    .btn-link:active,
+    .btn-link:focus {
         color: #91C7A9;
     }
     
@@ -136,3 +137,18 @@
             background-color: #252120;
         }
     }
+    
+    #exampleModalLabel {
+        color: #000;
+    }
+    
+    .form-control-label {
+        color: #000;
+    }
+    /*
+    .btn-primary,
+    .btn-primary:hover,
+    .btn-primary:focus {
+        background-color: #A92F41;
+        border-color: inherit;
+    }*/
