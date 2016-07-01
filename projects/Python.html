@@ -2,269 +2,297 @@
 <html lang="en">
 
 <head>
-  <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
-  <title>brandon sansone</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <title>brandon sansone</title>
 
-  <!-- Bootstrap CSS -->
-  <link href="/assets/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Bootstrap CSS -->
+    <link href="/assets/css/bootstrap.min.css" rel="stylesheet">
 
-  <!-- Custom CSS -->
-  <link href="/assets/css/styles.css" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link href="/assets/css/styles.css" rel="stylesheet">
 
-  <script>
-  (function (i, s, o, g, r, a, m) {
-    i['GoogleAnalyticsObject'] = r;
-    i[r] = i[r] || function () {
-      (i[r].q = i[r].q || []).push(arguments)
-    }, i[r].l = 1 * new Date();
-    a = s.createElement(o),
-    m = s.getElementsByTagName(o)[0];
-    a.async = 1;
-    a.src = g;
-    m.parentNode.insertBefore(a, m)
-  })(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga');
+    <script>
+        (function (i, s, o, g, r, a, m) {
+            i['GoogleAnalyticsObject'] = r;
+            i[r] = i[r] || function () {
+                (i[r].q = i[r].q || []).push(arguments)
+            }, i[r].l = 1 * new Date();
+            a = s.createElement(o),
+                m = s.getElementsByTagName(o)[0];
+            a.async = 1;
+            a.src = g;
+            m.parentNode.insertBefore(a, m)
+        })(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga');
 
-  ga('create', 'UA-79851636-1', 'auto');
-  ga('send', 'pageview');
-  </script>
+        ga('create', 'UA-79851636-1', 'auto');
+        ga('send', 'pageview');
+    </script>
 
-  <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
-  <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-  <!--[if lt IE 9]>
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
   <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
   <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
   <![endif]-->
 </head>
 
 <body>
-  <div class="brand text-center">
-    <h1>brandon sansone</h1>
-  </div>
-  <nav class="navbar navbar-default" role="navigation">
-    <div class="container-fluid">
-      <div class="navbar-header">
-        <button id="collapse-btn" type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-          <span>menu<b class="caret"></b></span>
-        </button>
-      </div>
-      <div class="collapse navbar-collapse">
-        <ul class="nav navbar-nav">
-          <li><a href="/">home</a></li>
-          <li><a href="/about/">about</a></li>
-          <li><a href="/Brandon_Sansone_Resume.pdf">resume</a></li>
-          <li class="dropdown">
-            <a href="#" class="dropdown-toggle" data-toggle="dropdown">projects <b class="caret"></b></a>
-            <ul class="dropdown-menu">
-              <li><a href="/projects/Project-Hero.html">Project Hero</a></li>
-              <li><a href="/projects/Python.html">Python</a></li>
-              <li><a href="/projects/Note-App.html">Note App</a></li>
-            </ul>
-          </li>
-          <li><a href="/contact/">contact</a></li>
-        </ul>
-      </div>
+    <div class="brand text-center">
+        <h1>brandon sansone</h1>
     </div>
-  </nav>
-  <div class="container">
-    <div class="row">
-      <h3>Python</h3>
+    <nav class="navbar navbar-default" role="navigation">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button id="collapse-btn" type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span>menu<b class="caret"></b></span>
+                </button>
+            </div>
+            <div class="collapse navbar-collapse">
+                <ul class="nav navbar-nav">
+                    <li><a href="/">home</a></li>
+                    <li><a href="/about/">about</a></li>
+                    <li><a href="/Brandon_Sansone_Resume.pdf">resume</a></li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">projects <b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="/projects/Project-Hero.html">Project Hero</a></li>
+                            <li><a href="/projects/Python.html">Python</a></li>
+                            <li><a href="/projects/Note-App.html">Note App</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="/contact/">contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <div class="container">
+        <div class="row">
+            <h3>Python</h3>
+        </div>
+        <div class="row">
+            <div class="col-lg-12 text-left">
+                <p>I am currently learning Python at school and in my spare time and I am enjoying it a lot.</p>
+                <p>I want to be able to share the source of the projects I work on for others to see and learn from.</p>
+            </div>
+        </div>
+        <br />
+        <div class="row">
+            <h4>Sequential Program Control - Energy Cost:</h4>
+            <p><strong>Objective:</strong> Write a program that calculates the annual cost of running various appliances. For each appliance, the program will request that the user enter the cost per kilowatt - hour and the number of kilowatt - hours the appliance uses in a year.</p>
+            <a href="#p1" data-toggle="collapse">View Source Code</a>
+            <div id="p1" class="col-lg-12 collapse">
+
+                <!-- HTML generated using hilite.me -->
+                <div style="background: #272822; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;"><pre style="margin: 0; line-height: 125%"><span style="color: #f8f8f2">program_info</span> <span style="color: #f92672">=</span> <span style="color: #e6db74">&#39;</span><span style="color: #ae81ff">\n</span><span style="color: #e6db74">Written by Brandon Sansone</span><span style="color: #ae81ff">\n</span><span style="color: #e6db74">Date: 6/9/2016</span><span style="color: #ae81ff">\n</span><span style="color: #e6db74">&#39;</span>
+<span style="color: #f8f8f2">annual_cost</span> <span style="color: #f92672">=</span> <span style="color: #ae81ff">0.0</span>       <span style="color: #75715e"># Annual usage cost per appliance</span>
+<span style="color: #f8f8f2">total_cost</span> <span style="color: #f92672">=</span> <span style="color: #ae81ff">0.0</span>        <span style="color: #75715e"># Total running cost of all appliances</span>
+
+<span style="color: #75715e">### Output Variable Description</span>
+<span style="color: #f8f8f2">print</span> <span style="color: #f8f8f2">(program_info)</span>
+<span style="color: #f8f8f2">amount</span> <span style="color: #f92672">=</span> <span style="color: #f8f8f2">int(input(</span><span style="color: #e6db74">&quot;</span><span style="color: #ae81ff">\n</span><span style="color: #e6db74">Enter amount of running appliances: &quot;</span><span style="color: #f8f8f2">));</span> <span style="color: #75715e"># Ask user amount of appliances to calculate</span>
+
+<span style="color: #66d9ef">for</span> <span style="color: #f8f8f2">x</span> <span style="color: #f92672">in</span> <span style="color: #f8f8f2">range(amount):</span> <span style="color: #75715e"># Loop through amount of appliances from previous input</span>
+     <span style="color: #f8f8f2">appliance</span> <span style="color: #f92672">=</span> <span style="color: #f8f8f2">(input(</span><span style="color: #e6db74">&quot;</span><span style="color: #ae81ff">\n</span><span style="color: #e6db74">Please enter the                     appliance name: &quot;</span><span style="color: #f8f8f2">));</span> <span style="color: #75715e"># Appliance name, string </span>
+     <span style="color: #f8f8f2">cost</span> <span style="color: #f92672">=</span> <span style="color: #f8f8f2">float(input(</span><span style="color: #e6db74">&quot;Please enter the cost per KW - hr of the appliance (in cents): &quot;</span><span style="color: #f8f8f2">));</span> <span style="color: #75715e"># Cost per KW - hr, float</span>
+     <span style="color: #f8f8f2">usage</span> <span style="color: #f92672">=</span> <span style="color: #f8f8f2">int(input(</span><span style="color: #e6db74">&quot;Please enter the annual usage (in KW - hr): &quot;</span><span style="color: #f8f8f2">));</span> <span style="color: #75715e"># Annual Usage, KW - hr</span>
+     <span style="color: #f8f8f2">annual_cost</span> <span style="color: #f92672">=</span> <span style="color: #f8f8f2">cost</span> <span style="color: #f92672">*</span> <span style="color: #f8f8f2">usage</span> <span style="color: #75715e"># Calculates the annual usage cost per appliance</span>
+     <span style="color: #f8f8f2">total_cost</span> <span style="color: #f92672">+=</span> <span style="color: #f8f8f2">annual_cost</span> <span style="color: #75715e"># Calculates the total running cost of all appliances</span>
+
+<span style="color: #f8f8f2">print</span> <span style="color: #f8f8f2">(</span><span style="color: #e6db74">&quot;</span><span style="color: #ae81ff">\n</span><span style="color: #e6db74">The total cost of the annual usage is&quot;</span><span style="color: #f8f8f2">,</span> <span style="color: #e6db74">&quot;${:,}&quot;</span><span style="color: #f92672">.</span><span style="color: #f8f8f2">format(round(total_cost,</span><span style="color: #ae81ff">2</span><span style="color: #f8f8f2">)),</span> <span style="color: #e6db74">&quot;.&quot;</span><span style="color: #f8f8f2">)</span> <span style="color: #75715e"># Print running total </span>
+</pre></div>
+
+
+
+            </div>
+        </div>
+        <br />
+        <div class="row">
+            <h4>Selection Program Control - BMI Calculator:</h4>
+            <p><strong>Objective:</strong> Write a program that will generate a person's BMI result based on the persons weight and height.</p>
+            <a href="#p2" data-toggle="collapse">View Source Code</a>
+            <div id="p2" class="col-lg-12 text-left collapse">
+
+                <!-- HTML generated using hilite.me -->
+                <div style="background: #272822; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;"><pre style="margin: 0; line-height: 125%"><span style="color: #75715e">### Define Variables</span>
+<span style="color: #f8f8f2">program_info</span> <span style="color: #f92672">=</span> <span style="color: #e6db74">&#39;</span><span style="color: #ae81ff">\n</span><span style="color: #e6db74">Written by Brandon Sansone</span><span style="color: #ae81ff">\n</span><span style="color: #e6db74">Date: 6/16/2016</span><span style="color: #ae81ff">\n</span><span style="color: #e6db74">&#39;</span>
+<span style="color: #f8f8f2">bmi</span> <span style="color: #f92672">=</span> <span style="color: #ae81ff">0.0</span>   <span style="color: #75715e"># Body Mass Index (BMI)</span>
+
+<span style="color: #75715e">### Program Info Output</span>
+<span style="color: #f8f8f2">print</span> <span style="color: #f8f8f2">(program_info)</span>
+
+<span style="color: #75715e">### Gather User input</span>
+<span style="color: #f8f8f2">weight</span> <span style="color: #f92672">=</span> <span style="color: #f8f8f2">float(input(</span><span style="color: #e6db74">&quot;</span><span style="color: #ae81ff">\n</span><span style="color: #e6db74">Enter your weight (pounds): &quot;</span><span style="color: #f8f8f2">));</span> <span style="color: #75715e"># Ask user for weight (in pounds)</span>
+<span style="color: #f8f8f2">height</span> <span style="color: #f92672">=</span> <span style="color: #f8f8f2">float(input(</span><span style="color: #e6db74">&quot;Enter your height (inches): &quot;</span><span style="color: #f8f8f2">));</span> <span style="color: #75715e"># Ask user for height (in inches)</span>
+
+<span style="color: #75715e">### Calculations</span>
+<span style="color: #f8f8f2">bmi</span> <span style="color: #f92672">=</span> <span style="color: #f8f8f2">weight</span> <span style="color: #f92672">*</span> <span style="color: #f8f8f2">(</span><span style="color: #ae81ff">703</span><span style="color: #f92672">/</span><span style="color: #f8f8f2">height</span><span style="color: #f92672">**</span><span style="color: #ae81ff">2</span><span style="color: #f8f8f2">)</span>
+
+<span style="color: #75715e">### Conditionals</span>
+<span style="color: #66d9ef">if</span> <span style="color: #f8f8f2">bmi</span> <span style="color: #f92672">&lt;</span> <span style="color: #ae81ff">18.5</span><span style="color: #f8f8f2">:</span>
+     <span style="color: #f8f8f2">print</span> <span style="color: #f8f8f2">(</span><span style="color: #e6db74">&quot;</span><span style="color: #ae81ff">\n</span><span style="color: #e6db74">BMI: &quot;</span><span style="color: #f8f8f2">,</span> <span style="color: #e6db74">&quot;{:,}&quot;</span><span style="color: #f92672">.</span><span style="color: #f8f8f2">format(round(bmi,</span><span style="color: #ae81ff">1</span><span style="color: #f8f8f2">)))</span>
+     <span style="color: #f8f8f2">print</span> <span style="color: #f8f8f2">(</span><span style="color: #e6db74">&quot;</span><span style="color: #ae81ff">\n</span><span style="color: #e6db74">Based on the BMI Calculator you are...underweight</span><span style="color: #ae81ff">\n</span><span style="color: #e6db74">&quot;</span><span style="color: #f8f8f2">)</span>
+<span style="color: #66d9ef">elif</span> <span style="color: #f8f8f2">bmi</span> <span style="color: #f92672">&gt;</span> <span style="color: #ae81ff">25</span><span style="color: #f8f8f2">:</span>
+     <span style="color: #f8f8f2">print</span> <span style="color: #f8f8f2">(</span><span style="color: #e6db74">&quot;</span><span style="color: #ae81ff">\n</span><span style="color: #e6db74">BMI: &quot;</span><span style="color: #f8f8f2">,</span> <span style="color: #e6db74">&quot;{:,}&quot;</span><span style="color: #f92672">.</span><span style="color: #f8f8f2">format(round(bmi,</span><span style="color: #ae81ff">1</span><span style="color: #f8f8f2">)))</span>
+     <span style="color: #f8f8f2">print</span> <span style="color: #f8f8f2">(</span><span style="color: #e6db74">&quot;</span><span style="color: #ae81ff">\n</span><span style="color: #e6db74">Based on the BMI Calculator you are...overweight</span><span style="color: #ae81ff">\n</span><span style="color: #e6db74">&quot;</span><span style="color: #f8f8f2">)</span>
+<span style="color: #66d9ef">else</span><span style="color: #f8f8f2">:</span>
+     <span style="color: #f8f8f2">print</span> <span style="color: #f8f8f2">(</span><span style="color: #e6db74">&quot;</span><span style="color: #ae81ff">\n</span><span style="color: #e6db74">BMI: &quot;</span><span style="color: #f8f8f2">,</span> <span style="color: #e6db74">&quot;{:,}&quot;</span><span style="color: #f92672">.</span><span style="color: #f8f8f2">format(round(bmi,</span><span style="color: #ae81ff">1</span><span style="color: #f8f8f2">)))</span>
+     <span style="color: #f8f8f2">print</span> <span style="color: #f8f8f2">(</span><span style="color: #e6db74">&quot;</span><span style="color: #ae81ff">\n</span><span style="color: #e6db74">Based on the BMI Calculator you are...optimal weight</span><span style="color: #ae81ff">\n</span><span style="color: #e6db74">&quot;</span><span style="color: #f8f8f2">)</span>
+</pre></div>
+
+
+
+
+
+            </div>
+
+        </div>
+        <br />
+        <div class="row">
+            <h4>Functions, Random Number Generators (Lotto Game):</h4>
+            <p><strong>Objective:</strong> Write a program that will prompt a user for three numbers where the numbers will be then checked against a computer generated series of three random numbers that are in sorted order. If the user numbers match each number generated by the computer as sorted they win. </p>
+            <a href="#p3" data-toggle="collapse">View Source Code</a>
+            <div id="p3" class="col-lg-12 text-left collapse">
+
+                <!-- HTML generated using hilite.me -->
+                <div style="background: #272822; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;"><pre style="margin: 0; line-height: 125%"><span style="color: #e6db74">&#39;&#39;&#39;</span>
+<span style="color: #e6db74">lab03.py</span>
+<span style="color: #e6db74">Written by Brandon Sansone</span>
+<span style="color: #e6db74">Date: 6/28/2016</span>
+<span style="color: #e6db74">Lab: Lab 03</span>
+<span style="color: #e6db74">Course Number: ITMD-413-02.16M</span>
+
+<span style="color: #e6db74">- Project Description - </span>
+<span style="color: #e6db74">Write a program that will prompt a user for three numbers</span>
+<span style="color: #e6db74">where the numbers will be then checked against a computer generated </span>
+<span style="color: #e6db74">generated series of three random numbers that are in sorted order.</span>
+<span style="color: #e6db74">If the user numbers match each number generated by</span>
+<span style="color: #e6db74">the computer as sorted they win.</span>
+
+<span style="color: #e6db74">&#39;&#39;&#39;</span>
+
+<span style="color: #75715e"># imports</span>
+<span style="color: #f92672">import</span> <span style="color: #f8f8f2">random</span>
+
+<span style="color: #75715e"># global variables</span>
+<span style="color: #f8f8f2">PROGRAM_INFO</span> <span style="color: #f92672">=</span> <span style="color: #e6db74">&#39;</span><span style="color: #ae81ff">\n</span><span style="color: #e6db74">Written by Brandon Sansone</span><span style="color: #ae81ff">\n</span><span style="color: #e6db74">Date: 6/28/2016</span><span style="color: #ae81ff">\n</span><span style="color: #e6db74">Lab 02&#39;</span>
+<span style="color: #f8f8f2">NUMBER_OF_PICKS</span> <span style="color: #f92672">=</span> <span style="color: #ae81ff">3</span>
+<span style="color: #f8f8f2">MIN_PICK</span> <span style="color: #f92672">=</span> <span style="color: #ae81ff">0</span>
+<span style="color: #f8f8f2">MAX_PICK</span> <span style="color: #f92672">=</span> <span style="color: #ae81ff">9</span>
+<span style="color: #f8f8f2">WINNINGS</span> <span style="color: #f92672">=</span> <span style="color: #ae81ff">100</span>
+<span style="color: #f8f8f2">OFFSETT</span> <span style="color: #f92672">=</span> <span style="color: #ae81ff">4</span>
+<span style="color: #f8f8f2">ATTEMPTS</span> <span style="color: #f92672">=</span> <span style="color: #ae81ff">0</span>
+<span style="color: #f8f8f2">MAX_ATTEMPTS</span> <span style="color: #f92672">=</span> <span style="color: #ae81ff">3</span>
+
+<span style="color: #75715e"># &#39;checker&#39;, compares userNums and winningNums to see if they have won or lost,</span>
+<span style="color: #75715e"># prints the output and returns True/False</span>
+<span style="color: #66d9ef">def</span> <span style="color: #a6e22e">checker</span><span style="color: #f8f8f2">(userNums,</span> <span style="color: #f8f8f2">winningNums):</span>
+    <span style="color: #66d9ef">if</span> <span style="color: #f8f8f2">userNums</span> <span style="color: #f92672">==</span> <span style="color: #f8f8f2">winningNums:</span>
+        <span style="color: #f8f8f2">print</span> <span style="color: #f8f8f2">(</span><span style="color: #e6db74">&quot;</span><span style="color: #ae81ff">\n</span><span style="color: #e6db74">Congratulations! You Win ${}!&quot;</span><span style="color: #f92672">.</span><span style="color: #f8f8f2">format(WINNINGS),</span>
+               <span style="color: #e6db74">&quot;</span><span style="color: #ae81ff">\n</span><span style="color: #e6db74">Your numbers: &quot;</span><span style="color: #f8f8f2">,</span> <span style="color: #f8f8f2">userNums,</span>
+               <span style="color: #e6db74">&quot;</span><span style="color: #ae81ff">\n</span><span style="color: #e6db74">The winning lottery numbers were: &quot;</span><span style="color: #f8f8f2">,</span> <span style="color: #f8f8f2">winningNums,</span> <span style="color: #e6db74">&quot;</span><span style="color: #ae81ff">\n</span><span style="color: #e6db74">&quot;</span><span style="color: #f8f8f2">)</span>
+        <span style="color: #66d9ef">return</span> <span style="color: #66d9ef">True</span>
+        
+    <span style="color: #66d9ef">else</span><span style="color: #f8f8f2">:</span>
+        <span style="color: #f8f8f2">print</span> <span style="color: #f8f8f2">(</span><span style="color: #e6db74">&quot;</span><span style="color: #ae81ff">\n</span><span style="color: #e6db74">Sorry, you lose...&quot;</span><span style="color: #f8f8f2">,</span>
+                <span style="color: #e6db74">&quot;</span><span style="color: #ae81ff">\n</span><span style="color: #e6db74">Your numbers: &quot;</span><span style="color: #f8f8f2">,</span> <span style="color: #f8f8f2">userNums,</span>
+                <span style="color: #e6db74">&quot;</span><span style="color: #ae81ff">\n</span><span style="color: #e6db74">The winning lottery numbers were: &quot;</span><span style="color: #f8f8f2">,</span> <span style="color: #f8f8f2">winningNums,</span> <span style="color: #e6db74">&quot;</span><span style="color: #ae81ff">\n</span><span style="color: #e6db74">&quot;</span><span style="color: #f8f8f2">)</span>
+        <span style="color: #66d9ef">return</span> <span style="color: #66d9ef">False</span>
+
+            
+<span style="color: #75715e"># &#39;get_user_nums&#39;, gets user input and puts into a list,</span>
+<span style="color: #75715e"># prints the num of attempts user is on, returns sorted list</span>
+<span style="color: #66d9ef">def</span> <span style="color: #a6e22e">get_user_nums</span><span style="color: #f8f8f2">():</span>
+    <span style="color: #f8f8f2">userNums</span> <span style="color: #f92672">=</span> <span style="color: #f8f8f2">[]</span>
+    <span style="color: #f8f8f2">print</span> <span style="color: #f8f8f2">(</span><span style="color: #e6db74">&quot;Attempt #&quot;</span><span style="color: #f8f8f2">,</span> <span style="color: #f8f8f2">ATTEMPTS)</span> 
+    <span style="color: #66d9ef">while</span> <span style="color: #f8f8f2">len(userNums)</span> <span style="color: #f92672">&lt;</span> <span style="color: #f8f8f2">NUMBER_OF_PICKS:</span>
+        <span style="color: #f8f8f2">nums</span> <span style="color: #f92672">=</span> <span style="color: #f8f8f2">input(</span><span style="color: #e6db74">&quot;Pick a number {} through {}: &quot;</span><span style="color: #f92672">.</span><span style="color: #f8f8f2">format(MIN_PICK,</span> <span style="color: #f8f8f2">MAX_PICK))</span>
+        <span style="color: #66d9ef">try</span><span style="color: #f8f8f2">:</span>
+            <span style="color: #f8f8f2">nums</span> <span style="color: #f92672">=</span> <span style="color: #f8f8f2">int(nums)</span>
+        <span style="color: #66d9ef">except</span><span style="color: #f8f8f2">:</span>
+            <span style="color: #f8f8f2">print(</span><span style="color: #e6db74">&quot;Sorry your input must be an integer!&quot;</span><span style="color: #f8f8f2">)</span>
+            <span style="color: #66d9ef">continue</span>
+        <span style="color: #66d9ef">if</span> <span style="color: #f8f8f2">MIN_PICK</span> <span style="color: #f92672">&lt;=</span> <span style="color: #f8f8f2">nums</span> <span style="color: #f92672">&lt;=</span> <span style="color: #f8f8f2">MAX_PICK:</span>
+            <span style="color: #66d9ef">if</span> <span style="color: #f8f8f2">nums</span> <span style="color: #f92672">not</span> <span style="color: #f92672">in</span> <span style="color: #f8f8f2">userNums:</span>
+                <span style="color: #f8f8f2">userNums</span><span style="color: #f92672">.</span><span style="color: #f8f8f2">append(nums)</span>
+            <span style="color: #66d9ef">else</span><span style="color: #f8f8f2">:</span>
+                <span style="color: #f8f8f2">print(</span><span style="color: #e6db74">&quot;Error! You have already picked this number&quot;</span><span style="color: #f8f8f2">)</span>
+        <span style="color: #66d9ef">else</span><span style="color: #f8f8f2">:</span>
+            <span style="color: #f8f8f2">print(</span><span style="color: #e6db74">&quot;Error! Your number was not in range&quot;</span><span style="color: #f8f8f2">)</span>
+
+    <span style="color: #66d9ef">return</span> <span style="color: #f8f8f2">sorted(userNums)</span>
+
+
+<span style="color: #75715e"># &#39;get_winning_nums&#39;, creates a sorted list with random nums </span>
+<span style="color: #75715e"># ranging from 0-9 with a range of 3 values</span>
+<span style="color: #66d9ef">def</span> <span style="color: #a6e22e">get_winning_nums</span><span style="color: #f8f8f2">():</span>
+    <span style="color: #66d9ef">return</span> <span style="color: #f8f8f2">sorted(random</span><span style="color: #f92672">.</span><span style="color: #f8f8f2">sample(range(MIN_PICK,</span> <span style="color: #f8f8f2">MAX_PICK),</span> <span style="color: #f8f8f2">NUMBER_OF_PICKS))</span> 
+
+
+<span style="color: #75715e"># &#39;lottery_menu&#39;, creates the text main menu to choose game or exit program</span>
+<span style="color: #66d9ef">def</span> <span style="color: #a6e22e">lottery_menu</span><span style="color: #f8f8f2">():</span>
+    <span style="color: #f8f8f2">name</span> <span style="color: #f92672">=</span> <span style="color: #e6db74">&#39; &#39;</span><span style="color: #f92672">*</span><span style="color: #f8f8f2">int(OFFSETT</span><span style="color: #f92672">/</span><span style="color: #ae81ff">2</span><span style="color: #f8f8f2">)</span> <span style="color: #f92672">+</span> <span style="color: #e6db74">&quot;LOTTERY MENU&quot;</span>
+    <span style="color: #f8f8f2">dotted</span> <span style="color: #f92672">=</span> <span style="color: #f8f8f2">(OFFSETT</span><span style="color: #f92672">+</span><span style="color: #f8f8f2">len(name))</span><span style="color: #f92672">*</span><span style="color: #e6db74">&#39;-&#39;</span>
+    <span style="color: #f8f8f2">options</span> <span style="color: #f92672">=</span> <span style="color: #f8f8f2">[</span><span style="color: #e6db74">&quot;[Play Pick {}]&quot;</span><span style="color: #f92672">.</span><span style="color: #f8f8f2">format(NUMBER_OF_PICKS),</span> 
+               <span style="color: #e6db74">&quot;[Exit]&quot;</span><span style="color: #f8f8f2">]</span>
+    <span style="color: #f8f8f2">print(</span><span style="color: #e6db74">&#39;{} </span><span style="color: #ae81ff">\n</span><span style="color: #e6db74">{} </span><span style="color: #ae81ff">\n</span><span style="color: #e6db74">{}&#39;</span><span style="color: #f92672">.</span><span style="color: #f8f8f2">format(dotted,</span> <span style="color: #f8f8f2">name,</span> <span style="color: #f8f8f2">dotted))</span>
+    <span style="color: #66d9ef">for</span> <span style="color: #f8f8f2">i,</span> <span style="color: #f8f8f2">opt</span> <span style="color: #f92672">in</span> <span style="color: #f8f8f2">enumerate(options):</span>
+        <span style="color: #f8f8f2">print(i</span><span style="color: #f92672">+</span><span style="color: #ae81ff">1</span><span style="color: #f8f8f2">,</span> <span style="color: #f8f8f2">opt)</span>
+    <span style="color: #f8f8f2">print(dotted)</span>
+
+
+<span style="color: #75715e"># &#39;play_pick_n&#39;, this is the game, calls the functions that get you the,</span>
+<span style="color: #75715e"># winningNums, userNums, and checker, does with this within 3 attempts</span>
+<span style="color: #66d9ef">def</span> <span style="color: #a6e22e">play_pick_n</span><span style="color: #f8f8f2">():</span>
+    <span style="color: #66d9ef">global</span> <span style="color: #f8f8f2">ATTEMPTS</span>
+    <span style="color: #f8f8f2">winningNums</span> <span style="color: #f92672">=</span> <span style="color: #f8f8f2">get_winning_nums()</span>
+    
+    <span style="color: #66d9ef">while</span> <span style="color: #f8f8f2">ATTEMPTS</span> <span style="color: #f92672">&lt;</span> <span style="color: #f8f8f2">MAX_ATTEMPTS:</span>
+        <span style="color: #f8f8f2">ATTEMPTS</span> <span style="color: #f92672">+=</span> <span style="color: #ae81ff">1</span>
+        <span style="color: #f8f8f2">userNums</span> <span style="color: #f92672">=</span> <span style="color: #f8f8f2">get_user_nums()</span>
+        <span style="color: #66d9ef">if</span> <span style="color: #f8f8f2">checker(userNums,</span> <span style="color: #f8f8f2">winningNums):</span>
+            <span style="color: #66d9ef">break</span>
+
+    
+<span style="color: #75715e"># &#39;main&#39;, calls the other functions, and builds the menu</span>
+<span style="color: #66d9ef">def</span> <span style="color: #a6e22e">main</span><span style="color: #f8f8f2">():</span>
+    <span style="color: #f8f8f2">print</span> <span style="color: #f8f8f2">(PROGRAM_INFO)</span>
+    <span style="color: #f8f8f2">lottery_menu()</span>
+    <span style="color: #66d9ef">while</span> <span style="color: #66d9ef">True</span><span style="color: #f8f8f2">:</span>
+        <span style="color: #f8f8f2">choice</span> <span style="color: #f92672">=</span> <span style="color: #f8f8f2">input(</span><span style="color: #e6db74">&quot;</span><span style="color: #ae81ff">\n</span><span style="color: #e6db74">Enter your choice[1-2]: &quot;</span><span style="color: #f8f8f2">)</span>
+        <span style="color: #66d9ef">if</span> <span style="color: #f8f8f2">choice</span> <span style="color: #f92672">==</span> <span style="color: #e6db74">&#39;1&#39;</span><span style="color: #f8f8f2">:</span>
+            <span style="color: #f8f8f2">string</span> <span style="color: #f92672">=</span> <span style="color: #e6db74">&quot;</span><span style="color: #ae81ff">\n</span><span style="color: #e6db74">[Play Pick {}]&quot;</span><span style="color: #f92672">.</span><span style="color: #f8f8f2">format(NUMBER_OF_PICKS)</span> <span style="color: #f92672">+</span> <span style="color: #e6db74">&quot;selected!&quot;</span>
+            <span style="color: #f8f8f2">dotted</span> <span style="color: #f92672">=</span> <span style="color: #e6db74">&#39;</span><span style="color: #ae81ff">\n</span><span style="color: #e6db74">&#39;</span><span style="color: #f92672">+</span> <span style="color: #f8f8f2">len(string)</span> <span style="color: #f92672">*</span> <span style="color: #e6db74">&quot;-&quot;</span>
+
+            <span style="color: #f8f8f2">print(dotted,</span>
+                  <span style="color: #f8f8f2">string,</span>
+                  <span style="color: #f8f8f2">dotted)</span>
+
+            <span style="color: #f8f8f2">play_pick_n()</span>
+            <span style="color: #66d9ef">break</span>
+
+        <span style="color: #66d9ef">elif</span> <span style="color: #f8f8f2">choice</span> <span style="color: #f92672">==</span> <span style="color: #e6db74">&#39;2&#39;</span><span style="color: #f8f8f2">:</span>
+            <span style="color: #f8f8f2">print</span> <span style="color: #f8f8f2">(</span><span style="color: #e6db74">&quot;Thanks for playing!</span><span style="color: #ae81ff">\n</span><span style="color: #e6db74">&quot;</span><span style="color: #f8f8f2">)</span>
+            <span style="color: #66d9ef">break</span>
+
+        <span style="color: #f8f8f2">print(</span><span style="color: #e6db74">&quot;Error! Invalid input. Press any key to continue...</span><span style="color: #ae81ff">\n</span><span style="color: #e6db74">&quot;</span><span style="color: #f8f8f2">)</span>
+
+<span style="color: #66d9ef">if</span> <span style="color: #f8f8f2">__name__</span> <span style="color: #f92672">==</span> <span style="color: #e6db74">&#39;__main__&#39;</span><span style="color: #f8f8f2">:</span>
+    <span style="color: #f8f8f2">main()</span>
+</pre></div>
+
+
+
+            </div>
+        </div>
+        <br />
     </div>
-    <div class="row">
-      <div class="col-lg-12 text-left">
-        <p>I am currently learning Python at school and in my spare time and I am enjoying it a lot.</p>
-        <p>I want to be able to share the source of the projects I work on for others to see and learn from.</p>
-      </div>
-    </div>
-    <br />
-    <div class="row">
-      <h4>Sequential Program Control - Energy Cost:</h4>
-      <p><strong>Objective:</strong> Write a program that calculates the annual cost of running various appliances. For each appliance, the program will request that the user enter the cost per kilowatt - hour and the number of kilowatt - hours the appliance uses in a year.</p>
-      <div class="col-lg-12 text-left">
-
-        <!-- HTML generated using hilite.me -->
-        <div style="background: #272822; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;"><pre style="margin: 0; line-height: 125%"><span style="color: #f8f8f2">program_info</span> <span style="color: #f92672">=</span> <span style="color: #e6db74">&#39;</span><span style="color: #ae81ff">\n</span><span style="color: #e6db74">Written by Brandon Sansone</span><span style="color: #ae81ff">\n</span><span style="color: #e6db74">Date: 6/9/2016</span><span style="color: #ae81ff">\n</span><span style="color: #e6db74">&#39;</span>
-          <span style="color: #f8f8f2">annual_cost</span> <span style="color: #f92672">=</span> <span style="color: #ae81ff">0.0</span>       <span style="color: #75715e"># Annual usage cost per appliance</span>
-          <span style="color: #f8f8f2">total_cost</span> <span style="color: #f92672">=</span> <span style="color: #ae81ff">0.0</span>        <span style="color: #75715e"># Total running cost of all appliances</span>
-
-          <span style="color: #75715e">### Output Variable Description</span>
-          <span style="color: #f8f8f2">print</span> <span style="color: #f8f8f2">(program_info)</span>
-          <span style="color: #f8f8f2">amount</span> <span style="color: #f92672">=</span> <span style="color: #f8f8f2">int(input(</span><span style="color: #e6db74">&quot;</span><span style="color: #ae81ff">\n</span><span style="color: #e6db74">Enter amount of running appliances: &quot;</span><span style="color: #f8f8f2">));</span> <span style="color: #75715e"># Ask user amount of appliances to calculate</span>
-
-          <span style="color: #66d9ef">for</span> <span style="color: #f8f8f2">x</span> <span style="color: #f92672">in</span> <span style="color: #f8f8f2">range(amount):</span> <span style="color: #75715e"># Loop through amount of appliances from previous input</span>
-          <span style="color: #f8f8f2">appliance</span> <span style="color: #f92672">=</span> <span style="color: #f8f8f2">(input(</span><span style="color: #e6db74">&quot;</span><span style="color: #ae81ff">\n</span><span style="color: #e6db74">Please enter the appliance name: &quot;</span><span style="color: #f8f8f2">));</span> <span style="color: #75715e"># Appliance name, string </span>
-          <span style="color: #f8f8f2">cost</span> <span style="color: #f92672">=</span> <span style="color: #f8f8f2">float(input(</span><span style="color: #e6db74">&quot;Please enter the cost per KW - hr of the appliance (in cents): &quot;</span><span style="color: #f8f8f2">));</span> <span style="color: #75715e"># Cost per KW - hr, float</span>
-          <span style="color: #f8f8f2">usage</span> <span style="color: #f92672">=</span> <span style="color: #f8f8f2">int(input(</span><span style="color: #e6db74">&quot;Please enter the annual usage (in KW - hr): &quot;</span><span style="color: #f8f8f2">));</span> <span style="color: #75715e"># Annual Usage, KW - hr</span>
-          <span style="color: #f8f8f2">annual_cost</span> <span style="color: #f92672">=</span> <span style="color: #f8f8f2">cost</span> <span style="color: #f92672">*</span> <span style="color: #f8f8f2">usage</span> <span style="color: #75715e"># Calculates the annual usage cost per appliance</span>
-          <span style="color: #f8f8f2">total_cost</span> <span style="color: #f92672">+=</span> <span style="color: #f8f8f2">annual_cost</span> <span style="color: #75715e"># Calculates the total running cost of all appliances</span>
-
-          <span style="color: #f8f8f2">print</span> <span style="color: #f8f8f2">(</span><span style="color: #e6db74">&quot;</span><span style="color: #ae81ff">\n</span><span style="color: #e6db74">The total cost of the annual usage is&quot;</span><span style="color: #f8f8f2">,</span> <span style="color: #e6db74">&quot;${:,}&quot;</span><span style="color: #f92672">.</span><span style="color: #f8f8f2">format(round(total_cost,</span><span style="color: #ae81ff">2</span><span style="color: #f8f8f2">)),</span> <span style="color: #e6db74">&quot;.&quot;</span><span style="color: #f8f8f2">)</span> <span style="color: #75715e"># Print running total </span>
-        </pre></div>
-
-      </div>
-    </div>
-    <br />
-    <div class="row">
-      <h4>Selection Program Control - BMI Calculator:</h4>
-      <p><strong>Objective:</strong> Write a program that will generate a person's BMI result based on the persons weight and height.</p>
-      <div class="col-lg-12 text-left">
-
-        <!-- HTML generated using hilite.me -->
-        <div style="background: #272822; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;"><pre style="margin: 0; line-height: 125%"><span style="color: #75715e">### Define Variables</span>
-          <span style="color: #f8f8f2">program_info</span> <span style="color: #f92672">=</span> <span style="color: #e6db74">&#39;</span><span style="color: #ae81ff">\n</span><span style="color: #e6db74">Written by Brandon Sansone</span><span style="color: #ae81ff">\n</span><span style="color: #e6db74">Date: 6/16/2016</span><span style="color: #ae81ff">\n</span><span style="color: #e6db74">&#39;</span>
-          <span style="color: #f8f8f2">bmi</span> <span style="color: #f92672">=</span> <span style="color: #ae81ff">0.0</span>   <span style="color: #75715e"># Body Mass Index (BMI)</span>
-
-          <span style="color: #75715e">### Program Info Output</span>
-          <span style="color: #f8f8f2">print</span> <span style="color: #f8f8f2">(program_info)</span>
-
-          <span style="color: #75715e">### Gather User input</span>
-          <span style="color: #f8f8f2">weight</span> <span style="color: #f92672">=</span> <span style="color: #f8f8f2">float(input(</span><span style="color: #e6db74">&quot;</span><span style="color: #ae81ff">\n</span><span style="color: #e6db74">Enter your weight (pounds): &quot;</span><span style="color: #f8f8f2">));</span> <span style="color: #75715e"># Ask user for weight (in pounds)</span>
-          <span style="color: #f8f8f2">height</span> <span style="color: #f92672">=</span> <span style="color: #f8f8f2">float(input(</span><span style="color: #e6db74">&quot;Enter your height (inches): &quot;</span><span style="color: #f8f8f2">));</span> <span style="color: #75715e"># Ask user for height (in inches)</span>
-
-          <span style="color: #75715e">### Calculations</span>
-          <span style="color: #f8f8f2">bmi</span> <span style="color: #f92672">=</span> <span style="color: #f8f8f2">weight</span> <span style="color: #f92672">*</span> <span style="color: #f8f8f2">(</span><span style="color: #ae81ff">703</span><span style="color: #f92672">/</span><span style="color: #f8f8f2">height</span><span style="color: #f92672">**</span><span style="color: #ae81ff">2</span><span style="color: #f8f8f2">)</span>
-
-          <span style="color: #75715e">### Conditionals</span>
-          <span style="color: #66d9ef">if</span> <span style="color: #f8f8f2">bmi</span> <span style="color: #f92672">&lt;</span> <span style="color: #ae81ff">18.5</span><span style="color: #f8f8f2">:</span>
-          <span style="color: #f8f8f2">print</span> <span style="color: #f8f8f2">(</span><span style="color: #e6db74">&quot;</span><span style="color: #ae81ff">\n</span><span style="color: #e6db74">BMI: &quot;</span><span style="color: #f8f8f2">,</span> <span style="color: #e6db74">&quot;{:,}&quot;</span><span style="color: #f92672">.</span><span style="color: #f8f8f2">format(round(bmi,</span><span style="color: #ae81ff">1</span><span style="color: #f8f8f2">)))</span>
-          <span style="color: #f8f8f2">print</span> <span style="color: #f8f8f2">(</span><span style="color: #e6db74">&quot;</span><span style="color: #ae81ff">\n</span><span style="color: #e6db74">Based on the BMI Calculator you are...underweight</span><span style="color: #ae81ff">\n</span><span style="color: #e6db74">&quot;</span><span style="color: #f8f8f2">)</span>
-          <span style="color: #66d9ef">elif</span> <span style="color: #f8f8f2">bmi</span> <span style="color: #f92672">&gt;</span> <span style="color: #ae81ff">25</span><span style="color: #f8f8f2">:</span>
-          <span style="color: #f8f8f2">print</span> <span style="color: #f8f8f2">(</span><span style="color: #e6db74">&quot;</span><span style="color: #ae81ff">\n</span><span style="color: #e6db74">BMI: &quot;</span><span style="color: #f8f8f2">,</span> <span style="color: #e6db74">&quot;{:,}&quot;</span><span style="color: #f92672">.</span><span style="color: #f8f8f2">format(round(bmi,</span><span style="color: #ae81ff">1</span><span style="color: #f8f8f2">)))</span>
-          <span style="color: #f8f8f2">print</span> <span style="color: #f8f8f2">(</span><span style="color: #e6db74">&quot;</span><span style="color: #ae81ff">\n</span><span style="color: #e6db74">Based on the BMI Calculator you are...overweight</span><span style="color: #ae81ff">\n</span><span style="color: #e6db74">&quot;</span><span style="color: #f8f8f2">)</span>
-          <span style="color: #66d9ef">else</span><span style="color: #f8f8f2">:</span>
-          <span style="color: #f8f8f2">print</span> <span style="color: #f8f8f2">(</span><span style="color: #e6db74">&quot;</span><span style="color: #ae81ff">\n</span><span style="color: #e6db74">BMI: &quot;</span><span style="color: #f8f8f2">,</span> <span style="color: #e6db74">&quot;{:,}&quot;</span><span style="color: #f92672">.</span><span style="color: #f8f8f2">format(round(bmi,</span><span style="color: #ae81ff">1</span><span style="color: #f8f8f2">)))</span>
-          <span style="color: #f8f8f2">print</span> <span style="color: #f8f8f2">(</span><span style="color: #e6db74">&quot;</span><span style="color: #ae81ff">\n</span><span style="color: #e6db74">Based on the BMI Calculator you are...optimal weight</span><span style="color: #ae81ff">\n</span><span style="color: #e6db74">&quot;</span><span style="color: #f8f8f2">)</span>
-        </pre></div>
-
-      </div>
-
-    </div>
-    <br />
-    <div class="row">
-      <h4>Functions, Random Number Generators (Lotto Game):</h4>
-      <p><strong>Objective:</strong> Write a program that will prompt a user for three numbers where the numbers will be then checked against a computer generated series of three random numbers that are in sorted order. If the user numbers match each number generated by the computer as sorted they win. </p>
-      <div class="col-lg-12 text-left">
-
-        <!-- HTML generated using hilite.me -->
-        <div style="background: #272822; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;"><pre style="margin: 0; line-height: 125%"><span style="color: #75715e"># imports</span>
-          <span style="color: #f92672">import</span> <span style="color: #f8f8f2">random</span>
-
-          <span style="color: #75715e"># global variables</span>
-          <span style="color: #f8f8f2">NUMBER_OF_PICKS</span> <span style="color: #f92672">=</span> <span style="color: #ae81ff">3</span>
-          <span style="color: #f8f8f2">MIN_PICK</span> <span style="color: #f92672">=</span> <span style="color: #ae81ff">0</span>
-          <span style="color: #f8f8f2">MAX_PICK</span> <span style="color: #f92672">=</span> <span style="color: #ae81ff">9</span>
-          <span style="color: #f8f8f2">WINNINGS</span> <span style="color: #f92672">=</span> <span style="color: #ae81ff">100</span>
-          <span style="color: #f8f8f2">OFFSETT</span> <span style="color: #f92672">=</span> <span style="color: #ae81ff">4</span>
-          <span style="color: #f8f8f2">ATTEMPTS</span> <span style="color: #f92672">=</span> <span style="color: #ae81ff">0</span>
-          <span style="color: #f8f8f2">MAX_ATTEMPTS</span> <span style="color: #f92672">=</span> <span style="color: #ae81ff">3</span>
-
-          <span style="color: #75715e"># &#39;checker&#39;, compares userNums and winningNums to see if they have won or lost,</span>
-          <span style="color: #75715e"># prints the output and returns True/False</span>
-          <span style="color: #66d9ef">def</span> <span style="color: #a6e22e">checker</span><span style="color: #f8f8f2">(userNums,</span> <span style="color: #f8f8f2">winningNums):</span>
-          <span style="color: #66d9ef">if</span> <span style="color: #f8f8f2">userNums</span> <span style="color: #f92672">==</span> <span style="color: #f8f8f2">winningNums:</span>
-          <span style="color: #f8f8f2">print</span> <span style="color: #f8f8f2">(</span><span style="color: #e6db74">&quot;</span><span style="color: #ae81ff">\n</span><span style="color: #e6db74">Congratulations! You Win ${}!&quot;</span><span style="color: #f92672">.</span><span style="color: #f8f8f2">format(WINNINGS),</span>
-          <span style="color: #e6db74">&quot;</span><span style="color: #ae81ff">\n</span><span style="color: #e6db74">Your numbers: &quot;</span><span style="color: #f8f8f2">,</span> <span style="color: #f8f8f2">userNums,</span>
-          <span style="color: #e6db74">&quot;</span><span style="color: #ae81ff">\n</span><span style="color: #e6db74">The winning lottery numbers were: &quot;</span><span style="color: #f8f8f2">,</span> <span style="color: #f8f8f2">winningNums,</span> <span style="color: #e6db74">&quot;</span><span style="color: #ae81ff">\n</span><span style="color: #e6db74">&quot;</span><span style="color: #f8f8f2">)</span>
-          <span style="color: #66d9ef">return</span> <span style="color: #66d9ef">True</span>
-
-          <span style="color: #66d9ef">else</span><span style="color: #f8f8f2">:</span>
-          <span style="color: #f8f8f2">print</span> <span style="color: #f8f8f2">(</span><span style="color: #e6db74">&quot;</span><span style="color: #ae81ff">\n</span><span style="color: #e6db74">Sorry, you lose...&quot;</span><span style="color: #f8f8f2">,</span>
-          <span style="color: #e6db74">&quot;</span><span style="color: #ae81ff">\n</span><span style="color: #e6db74">Your numbers: &quot;</span><span style="color: #f8f8f2">,</span> <span style="color: #f8f8f2">userNums,</span>
-          <span style="color: #e6db74">&quot;</span><span style="color: #ae81ff">\n</span><span style="color: #e6db74">The winning lottery numbers were: &quot;</span><span style="color: #f8f8f2">,</span> <span style="color: #f8f8f2">winningNums,</span> <span style="color: #e6db74">&quot;</span><span style="color: #ae81ff">\n</span><span style="color: #e6db74">&quot;</span><span style="color: #f8f8f2">)</span>
-          <span style="color: #66d9ef">return</span> <span style="color: #66d9ef">False</span>
-
-
-          <span style="color: #75715e"># &#39;get_user_nums&#39;, gets user input and puts into a list,</span>
-          <span style="color: #75715e"># prints the num of attempts user is on, returns sorted list</span>
-          <span style="color: #66d9ef">def</span> <span style="color: #a6e22e">get_user_nums</span><span style="color: #f8f8f2">():</span>
-          <span style="color: #f8f8f2">userNums</span> <span style="color: #f92672">=</span> <span style="color: #f8f8f2">[]</span>
-          <span style="color: #f8f8f2">print</span> <span style="color: #f8f8f2">(</span><span style="color: #e6db74">&quot;Attempt #&quot;</span><span style="color: #f8f8f2">,</span> <span style="color: #f8f8f2">ATTEMPTS)</span>
-          <span style="color: #66d9ef">while</span> <span style="color: #f8f8f2">len(userNums)</span> <span style="color: #f92672">&lt;</span> <span style="color: #f8f8f2">NUMBER_OF_PICKS:</span>
-          <span style="color: #f8f8f2">nums</span> <span style="color: #f92672">=</span> <span style="color: #f8f8f2">input(</span><span style="color: #e6db74">&quot;Pick a number {} through {}: &quot;</span><span style="color: #f92672">.</span><span style="color: #f8f8f2">format(MIN_PICK,</span> <span style="color: #f8f8f2">MAX_PICK))</span>
-          <span style="color: #66d9ef">try</span><span style="color: #f8f8f2">:</span>
-          <span style="color: #f8f8f2">nums</span> <span style="color: #f92672">=</span> <span style="color: #f8f8f2">int(nums)</span>
-          <span style="color: #66d9ef">except</span><span style="color: #f8f8f2">:</span>
-          <span style="color: #f8f8f2">print(</span><span style="color: #e6db74">&quot;Sorry your input must be an integer!&quot;</span><span style="color: #f8f8f2">)</span>
-          <span style="color: #66d9ef">continue</span>
-          <span style="color: #66d9ef">if</span> <span style="color: #f8f8f2">MIN_PICK</span> <span style="color: #f92672">&lt;=</span> <span style="color: #f8f8f2">nums</span> <span style="color: #f92672">&lt;=</span> <span style="color: #f8f8f2">MAX_PICK:</span>
-          <span style="color: #66d9ef">if</span> <span style="color: #f8f8f2">nums</span> <span style="color: #f92672">not</span> <span style="color: #f92672">in</span> <span style="color: #f8f8f2">userNums:</span>
-          <span style="color: #f8f8f2">userNums</span><span style="color: #f92672">.</span><span style="color: #f8f8f2">append(nums)</span>
-          <span style="color: #66d9ef">else</span><span style="color: #f8f8f2">:</span>
-          <span style="color: #f8f8f2">print(</span><span style="color: #e6db74">&quot;Error! You have already picked this number&quot;</span><span style="color: #f8f8f2">)</span>
-          <span style="color: #66d9ef">else</span><span style="color: #f8f8f2">:</span>
-          <span style="color: #f8f8f2">print(</span><span style="color: #e6db74">&quot;Error! Your number was not in range&quot;</span><span style="color: #f8f8f2">)</span>
-
-          <span style="color: #66d9ef">return</span> <span style="color: #f8f8f2">sorted(userNums)</span>
-
-
-          <span style="color: #75715e"># &#39;get_winning_nums&#39;, creates a sorted list with random nums </span>
-          <span style="color: #75715e"># ranging from 0-9 with a range of 3 values</span>
-          <span style="color: #66d9ef">def</span> <span style="color: #a6e22e">get_winning_nums</span><span style="color: #f8f8f2">():</span>
-          <span style="color: #66d9ef">return</span> <span style="color: #f8f8f2">sorted(random</span><span style="color: #f92672">.</span><span style="color: #f8f8f2">sample(range(MIN_PICK,</span> <span style="color: #f8f8f2">MAX_PICK),</span> <span style="color: #f8f8f2">NUMBER_OF_PICKS))</span>
-
-
-          <span style="color: #75715e"># &#39;lottery_menu&#39;, creates the text main menu to choose game or exit program</span>
-          <span style="color: #66d9ef">def</span> <span style="color: #a6e22e">lottery_menu</span><span style="color: #f8f8f2">():</span>
-          <span style="color: #f8f8f2">name</span> <span style="color: #f92672">=</span> <span style="color: #e6db74">&#39; &#39;</span><span style="color: #f92672">*</span><span style="color: #f8f8f2">int(OFFSETT</span><span style="color: #f92672">/</span><span style="color: #ae81ff">2</span><span style="color: #f8f8f2">)</span> <span style="color: #f92672">+</span> <span style="color: #e6db74">&quot;LOTTERY MENU&quot;</span>
-          <span style="color: #f8f8f2">dotted</span> <span style="color: #f92672">=</span> <span style="color: #f8f8f2">(OFFSETT</span><span style="color: #f92672">+</span><span style="color: #f8f8f2">len(name))</span><span style="color: #f92672">*</span><span style="color: #e6db74">&#39;-&#39;</span>
-          <span style="color: #f8f8f2">options</span> <span style="color: #f92672">=</span> <span style="color: #f8f8f2">[</span><span style="color: #e6db74">&quot;[Play Pick {}]&quot;</span><span style="color: #f92672">.</span><span style="color: #f8f8f2">format(NUMBER_OF_PICKS),</span>
-          <span style="color: #e6db74">&quot;[Exit]&quot;</span><span style="color: #f8f8f2">]</span>
-          <span style="color: #f8f8f2">print(</span><span style="color: #e6db74">&#39;{} </span><span style="color: #ae81ff">\n</span><span style="color: #e6db74">{} </span><span style="color: #ae81ff">\n</span><span style="color: #e6db74">{}&#39;</span><span style="color: #f92672">.</span><span style="color: #f8f8f2">format(dotted,</span> <span style="color: #f8f8f2">name,</span> <span style="color: #f8f8f2">dotted))</span>
-          <span style="color: #66d9ef">for</span> <span style="color: #f8f8f2">i,</span> <span style="color: #f8f8f2">opt</span> <span style="color: #f92672">in</span> <span style="color: #f8f8f2">enumerate(options):</span>
-          <span style="color: #f8f8f2">print(i</span><span style="color: #f92672">+</span><span style="color: #ae81ff">1</span><span style="color: #f8f8f2">,</span> <span style="color: #f8f8f2">opt)</span>
-          <span style="color: #f8f8f2">print(dotted)</span>
-
-
-          <span style="color: #75715e"># &#39;play_pick_n&#39;, this is the game, calls the functions that get you the,</span>
-          <span style="color: #75715e"># winningNums, userNums, and checker, does with this within 3 attempts</span>
-          <span style="color: #66d9ef">def</span> <span style="color: #a6e22e">play_pick_n</span><span style="color: #f8f8f2">():</span>
-          <span style="color: #66d9ef">global</span> <span style="color: #f8f8f2">ATTEMPTS</span>
-          <span style="color: #f8f8f2">winningNums</span> <span style="color: #f92672">=</span> <span style="color: #f8f8f2">get_winning_nums()</span>
-
-          <span style="color: #66d9ef">while</span> <span style="color: #f8f8f2">ATTEMPTS</span> <span style="color: #f92672">&lt;</span> <span style="color: #f8f8f2">MAX_ATTEMPTS:</span>
-          <span style="color: #f8f8f2">ATTEMPTS</span> <span style="color: #f92672">+=</span> <span style="color: #ae81ff">1</span>
-          <span style="color: #f8f8f2">userNums</span> <span style="color: #f92672">=</span> <span style="color: #f8f8f2">get_user_nums()</span>
-          <span style="color: #66d9ef">if</span> <span style="color: #f8f8f2">checker(userNums,</span> <span style="color: #f8f8f2">winningNums):</span>
-          <span style="color: #66d9ef">break</span>
-
-
-          <span style="color: #75715e"># &#39;main&#39;, calls the other functions, and builds the menu</span>
-          <span style="color: #66d9ef">def</span> <span style="color: #a6e22e">main</span><span style="color: #f8f8f2">():</span>
-          <span style="color: #f8f8f2">lottery_menu()</span>
-          <span style="color: #66d9ef">while</span> <span style="color: #66d9ef">True</span><span style="color: #f8f8f2">:</span>
-          <span style="color: #f8f8f2">choice</span> <span style="color: #f92672">=</span> <span style="color: #f8f8f2">input(</span><span style="color: #e6db74">&quot;</span><span style="color: #ae81ff">\n</span><span style="color: #e6db74">Enter your choice[1-2]: &quot;</span><span style="color: #f8f8f2">)</span>
-          <span style="color: #66d9ef">if</span> <span style="color: #f8f8f2">choice</span> <span style="color: #f92672">==</span> <span style="color: #e6db74">&#39;1&#39;</span><span style="color: #f8f8f2">:</span>
-          <span style="color: #f8f8f2">string</span> <span style="color: #f92672">=</span> <span style="color: #e6db74">&quot;</span><span style="color: #ae81ff">\n</span><span style="color: #e6db74">[Play Pick {}]&quot;</span><span style="color: #f92672">.</span><span style="color: #f8f8f2">format(NUMBER_OF_PICKS)</span> <span style="color: #f92672">+</span> <span style="color: #e6db74">&quot;selected!&quot;</span>
-          <span style="color: #f8f8f2">dotted</span> <span style="color: #f92672">=</span> <span style="color: #e6db74">&#39;</span><span style="color: #ae81ff">\n</span><span style="color: #e6db74">&#39;</span><span style="color: #f92672">+</span> <span style="color: #f8f8f2">len(string)</span> <span style="color: #f92672">*</span> <span style="color: #e6db74">&quot;-&quot;</span>
-
-          <span style="color: #f8f8f2">print(dotted,</span>
-          <span style="color: #f8f8f2">string,</span>
-          <span style="color: #f8f8f2">dotted)</span>
-
-          <span style="color: #f8f8f2">play_pick_n()</span>
-          <span style="color: #66d9ef">break</span>
-
-          <span style="color: #66d9ef">elif</span> <span style="color: #f8f8f2">choice</span> <span style="color: #f92672">==</span> <span style="color: #e6db74">&#39;2&#39;</span><span style="color: #f8f8f2">:</span>
-          <span style="color: #f8f8f2">print</span> <span style="color: #f8f8f2">(</span><span style="color: #e6db74">&quot;Thanks for playing!</span><span style="color: #ae81ff">\n</span><span style="color: #e6db74">&quot;</span><span style="color: #f8f8f2">)</span>
-          <span style="color: #66d9ef">break</span>
-
-          <span style="color: #f8f8f2">print(</span><span style="color: #e6db74">&quot;Error! Invalid input. Press any key to continue...</span><span style="color: #ae81ff">\n</span><span style="color: #e6db74">&quot;</span><span style="color: #f8f8f2">)</span>
-
-          <span style="color: #66d9ef">if</span> <span style="color: #f8f8f2">__name__</span> <span style="color: #f92672">==</span> <span style="color: #e6db74">&#39;__main__&#39;</span><span style="color: #f8f8f2">:</span>
-          <span style="color: #f8f8f2">main()</span>
-        </pre></div>
-
-
-      </div>
-    </div>
-    <br />
-  </div>
-  <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-  <!-- Include all compiled plugins (below), or include individual files as needed -->
-  <script src="/assets/js/bootstrap.min.js"></script>
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="/assets/js/bootstrap.min.js"></script>
 </body>
 
 </html>
