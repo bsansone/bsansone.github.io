@@ -1,12 +1,12 @@
 body {
-  font-family: "Courier New", "Helvetica Neue", Helvetica, Arial, sans-serif;
-  background: #252120;
-  color: #fff;
+    font-family: "Courier New", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    background: #252120;
+    color: #fff;
 }
 
 hr {
-  max-width: 400px;
-  border-color: #fff;
+    max-width: 400px;
+    border-color: #fff;
 }
 
 a,
@@ -15,158 +15,163 @@ a:hover,
 .btn-link:hover,
 .btn-link:active,
 .btn-link:focus {
-  color: #91C7A9;
+    color: #91C7A9;
 }
 
 blockquote {
-  font-size: inherit;
-  display: block;
-  border-color: #252120;
-  margin-top: 1em;
-  margin-bottom: 1em;
-  margin-left: 40px;
-  margin-right: 40px;
+    font-size: inherit;
+    display: block;
+    border-color: #252120;
+    margin-top: 1em;
+    margin-bottom: 1em;
+    margin-left: 40px;
+    margin-right: 40px;
 }
 
 pre {
-  background: #252120;
-  color: #fff;
-  border-color: #252120;
+    background: #252120;
+    color: #fff;
+    border-color: #252120;
 }
 
 #intro_div {
-  max-width: 800px;
+    max-width: 800px;
 }
 
 .underCon {
-  color: #E5DFC5;
+    color: #E5DFC5;
 }
 
 .navbar .navbar-nav {
-  display: inline-block;
-  float: none;
-  text-align: center;
+    display: inline-block;
+    float: none;
+    text-align: center;
 }
 
 .navbar-default {
-  background-color: #252120;
-  border-color: #252120;
-  text-align: center;
+    background-color: #252120;
+    border-color: #252120;
+    text-align: center;
 }
 
 .navbar-default .navbar-nav > li > a {
-  color: #fff;
+    color: #fff;
 }
 
 .navbar-default .navbar-nav > li > a:hover,
 .navbar-default .navbar-nav > li > a:focus {
-  color: #A92F41;
-  background-color: transparent;
+    color: #A92F41;
+    background-color: transparent;
 }
 
 .navbar-default .navbar-nav>.open>a,
 .navbar-default .navbar-nav>.open>a:focus,
 .navbar-default .navbar-nav>.open>a:hover {
-  color: #A92F41;
-  background-color: #252120;
+    color: #A92F41;
+    background-color: #252120;
 }
 
 .dropdown-menu {
-  position: absolute;
-  top: 100%;
-  left: 0;
-  z-index: 1000;
-  display: none;
-  float: left;
-  min-width: 160px;
-  padding: 5px 0;
-  margin: 2px 0 0;
-  font-size: 14px;
-  text-align: left;
-  list-style: none;
-  background-color: transparent;
-  -webkit-background-clip: padding-box;
-  background-clip: padding-box;
-  border: 1px solid #ccc;
-  border: 1px solid rgba(0, 0, 0, .15);
-  border-radius: 4px;
-  -webkit-box-shadow: 0 6px 12px rgba(0, 0, 0, .175);
-  box-shadow: 0 6px 12px rgba(0, 0, 0, .175);
+    position: absolute;
+    top: 100%;
+    left: 0;
+    z-index: 1000;
+    display: none;
+    float: left;
+    min-width: 160px;
+    padding: 5px 0;
+    margin: 2px 0 0;
+    font-size: 14px;
+    text-align: left;
+    list-style: none;
+    background-color: transparent;
+    -webkit-background-clip: padding-box;
+    background-clip: padding-box;
+    border: 1px solid #ccc;
+    border: 1px solid rgba(0, 0, 0, .15);
+    border-radius: 4px;
+    -webkit-box-shadow: 0 6px 12px rgba(0, 0, 0, .175);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, .175);
 }
 
 .dropdown-menu > li > a {
-  display: block;
-  padding: 3px 20px;
-  clear: both;
-  font-weight: normal;
-  line-height: 1.42857143;
-  color: #fff;
-  white-space: nowrap;
-  background-color: #252120;
+    display: block;
+    padding: 3px 20px;
+    clear: both;
+    font-weight: normal;
+    line-height: 1.42857143;
+    color: #fff;
+    white-space: nowrap;
+    background-color: #252120;
 }
 
 .dropdown-menu > li > a:hover,
 .dropdown-menu > li > a:focus {
-  color: #A92F41;
-  text-decoration: none;
-  background-color: #252120;
+    color: #A92F41;
+    text-decoration: none;
+    background-color: #252120;
 }
 
 .dropdown-menu > .active > a,
 .dropdown-menu > .active > a:hover,
 .dropdown-menu > .active > a:focus {
-  color: #fff;
-  text-decoration: none;
-  background-color: #252120;
-  outline: 0;
+    color: #fff;
+    text-decoration: none;
+    background-color: #252120;
+    outline: 0;
+}
+
+ul > #favProgramList > .list-group > li > .list-group-item {
+    padding: none;
 }
 
 .list-group-item {
-  color: #fff;
-  background-color: #252120;
-  border-color: #252120;
+    color: #fff;
+    background-color: #252120;
+    border-color: #252120;
 }
 
 @media (max-width: 767px) {
-  .navbar-default .navbar-nav .open .dropdown-menu > li > a {
-    color: #fff;
-    border-color: #252120;
-  }
-  .navbar-default .navbar-nav .open .dropdown-menu > li > a:hover {
-    color: #A92F41;
-    text-decoration: none;
-    background-color: #252120;
-  }
+    .navbar-default .navbar-nav .open .dropdown-menu > li > a {
+        color: #fff;
+        border-color: #252120;
+    }
+    .navbar-default .navbar-nav .open .dropdown-menu > li > a:hover {
+        color: #A92F41;
+        text-decoration: none;
+        background-color: #252120;
+    }
 }
 
 #ModalLabel {
-  color: #000;
+    color: #000;
 }
 
 #collapse-btn {
-  background-color: #252120;
+    background-color: #252120;
 }
 
 span:hover,
 span:active,
 span:focus {
-  color: #A92F41;
+    color: #A92F41;
 }
 
 .form-control-label {
-  color: #000;
+    color: #000;
 }
 
-.navbar-default .navbar-collapse, .navbar-default .navbar-form {
-  border-color: #252120;
-  background-color: #252120;
+.navbar-default .navbar-collapse,
+.navbar-default .navbar-form {
+    border-color: #252120;
+    background-color: #252120;
 }
 
-.navbar-default .navbar-toggle{
-  width: 100%;
-  float: none;
-  margin-right: 0;
-  border-color: #252120;
+.navbar-default .navbar-toggle {
+    width: 100%;
+    float: none;
+    margin-right: 0;
+    border-color: #252120;
 }
 
 
