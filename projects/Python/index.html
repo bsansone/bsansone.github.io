@@ -280,6 +280,276 @@
             </div>
         </div>
         <br />
+        <div class="row">
+            <div class="col-lg-12 text-left">
+                <h4>File Processing - Payroll Program:</h4>
+                <p><strong>Objective:</strong> This lab will consist of options to users to view, add, modify or delete payroll record data. Reference to Section 6.3 of the text for nice examples on how to handle modifications to a file. </p>
+                <a href="#p4" data-toggle="collapse">View Source Code</a>
+                <div id="p4" class="col-lg-12 text-left collapse">
+
+                    <!-- HTML generated using hilite.me -->
+                    <div style="background: #272822; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;"><pre style="margin: 0; line-height: 125%"><span style="color: #e6db74">&#39;&#39;&#39;</span>
+<span style="color: #e6db74">Written by Brandon Sansone</span>
+<span style="color: #e6db74">Date: 7/05/2016</span>
+
+<span style="color: #e6db74">- Project Description -</span>
+<span style="color: #e6db74">This lab will consist of options to users to view, add, modify or delete</span>
+<span style="color: #e6db74">payroll record data.</span>
+<span style="color: #e6db74">&#39;&#39;&#39;</span>
+
+<span style="color: #75715e"># imports</span>
+<span style="color: #f92672">import</span> <span style="color: #f8f8f2">os</span>
+<span style="color: #f92672">import</span> <span style="color: #f8f8f2">sys</span>
+
+<span style="color: #75715e"># global variables</span>
+<span style="color: #f8f8f2">PROGRAM_INFO</span> <span style="color: #f92672">=</span> <span style="color: #e6db74">&#39;</span><span style="color: #ae81ff">\n</span><span style="color: #e6db74">Written by Brandon Sansone</span><span style="color: #ae81ff">\n</span><span style="color: #e6db74">Date: 7/05/2016</span><span style="color: #ae81ff">\n</span><span style="color: #e6db74">&#39;</span>
+<span style="color: #f8f8f2">OFFSET</span> <span style="color: #f92672">=</span> <span style="color: #ae81ff">4</span>  <span style="color: #75715e"># this is just for printing dashes in the menu</span>
+
+
+<span style="color: #66d9ef">def</span> <span style="color: #a6e22e">modify_emp</span><span style="color: #f8f8f2">():</span>
+    <span style="color: #e6db74">&#39;&#39;&#39;</span>
+<span style="color: #e6db74">    modify record data from the file</span>
+<span style="color: #e6db74">    &#39;&#39;&#39;</span>
+    <span style="color: #f8f8f2">menu_name</span> <span style="color: #f92672">=</span> <span style="color: #e6db74">&#39; &#39;</span> <span style="color: #f92672">*</span> <span style="color: #f8f8f2">int(OFFSET</span> <span style="color: #f92672">/</span> <span style="color: #ae81ff">2</span><span style="color: #f8f8f2">)</span> <span style="color: #f92672">+</span> <span style="color: #e6db74">&quot;MODIFY EMPLOYEE&quot;</span>
+    <span style="color: #f8f8f2">dotted</span> <span style="color: #f92672">=</span> <span style="color: #f8f8f2">(OFFSET</span> <span style="color: #f92672">+</span> <span style="color: #f8f8f2">len(menu_name))</span> <span style="color: #f92672">*</span> <span style="color: #e6db74">&#39;-&#39;</span>
+    <span style="color: #f8f8f2">print(</span><span style="color: #e6db74">&#39;{} </span><span style="color: #ae81ff">\n</span><span style="color: #e6db74">{} </span><span style="color: #ae81ff">\n</span><span style="color: #e6db74">{}&#39;</span><span style="color: #f92672">.</span><span style="color: #f8f8f2">format(dotted,</span> <span style="color: #f8f8f2">menu_name,</span> <span style="color: #f8f8f2">dotted))</span>
+    <span style="color: #75715e"># get the employee to search for</span>
+    <span style="color: #f8f8f2">search_name</span> <span style="color: #f92672">=</span> <span style="color: #f8f8f2">input(</span><span style="color: #e6db74">&#39;Give me an employee to modify: &#39;</span><span style="color: #f8f8f2">)</span>
+    <span style="color: #66d9ef">try</span><span style="color: #f8f8f2">:</span>
+        <span style="color: #75715e"># opens the employees.txt file for reading and the temp.txt for writing</span>
+        <span style="color: #66d9ef">with</span> <span style="color: #f8f8f2">open(</span><span style="color: #e6db74">&#39;employees.txt&#39;</span><span style="color: #f8f8f2">)</span> <span style="color: #66d9ef">as</span> <span style="color: #f8f8f2">emps_file,</span> \
+                <span style="color: #f8f8f2">open(</span><span style="color: #e6db74">&#39;temp.txt&#39;</span><span style="color: #f8f8f2">,</span> <span style="color: #e6db74">&#39;w&#39;</span><span style="color: #f8f8f2">)</span> <span style="color: #66d9ef">as</span> <span style="color: #f8f8f2">temp_file:</span>
+            <span style="color: #66d9ef">for</span> <span style="color: #f8f8f2">line</span> <span style="color: #f92672">in</span> <span style="color: #f8f8f2">emps_file:</span>  <span style="color: #75715e"># searches line by line for search_name</span>
+                <span style="color: #66d9ef">if</span> <span style="color: #f92672">not</span> <span style="color: #f8f8f2">line:</span>
+                    <span style="color: #66d9ef">continue</span>
+                <span style="color: #f8f8f2">first_name,</span> <span style="color: #f8f8f2">last_name,</span> <span style="color: #f8f8f2">rate,</span> <span style="color: #f8f8f2">hours</span> <span style="color: #f92672">=</span> <span style="color: #f8f8f2">line</span><span style="color: #f92672">.</span><span style="color: #f8f8f2">split()</span>
+                <span style="color: #f8f8f2">name</span> <span style="color: #f92672">=</span> <span style="color: #e6db74">&quot;{} {}&quot;</span><span style="color: #f92672">.</span><span style="color: #f8f8f2">format(first_name,</span> <span style="color: #f8f8f2">last_name)</span>
+                <span style="color: #66d9ef">if</span> <span style="color: #f8f8f2">name</span> <span style="color: #f92672">==</span> <span style="color: #f8f8f2">search_name:</span>  <span style="color: #75715e"># if there is a match</span>
+                    <span style="color: #f8f8f2">print(</span><span style="color: #e6db74">&#39;</span><span style="color: #ae81ff">\n</span><span style="color: #e6db74">Employee found!&#39;</span><span style="color: #f8f8f2">)</span>
+                    <span style="color: #75715e"># ask user for updated data</span>
+                    <span style="color: #f8f8f2">emp_pay_rate</span> <span style="color: #f92672">=</span> <span style="color: #f8f8f2">input(</span><span style="color: #e6db74">&quot;Enter NEW rate of pay: &quot;</span><span style="color: #f8f8f2">)</span>
+                    <span style="color: #f8f8f2">emp_hours_worked</span> <span style="color: #f92672">=</span> <span style="color: #f8f8f2">input(</span><span style="color: #e6db74">&quot;Enter NEW hours worked: &quot;</span><span style="color: #f8f8f2">)</span>
+                    <span style="color: #75715e">#  write modified info to temp.txt</span>
+                    <span style="color: #f8f8f2">temp_file</span><span style="color: #f92672">.</span><span style="color: #f8f8f2">write(name</span> <span style="color: #f92672">+</span> <span style="color: #e6db74">&#39; &#39;</span> <span style="color: #f92672">+</span>
+                                    <span style="color: #f8f8f2">emp_pay_rate</span> <span style="color: #f92672">+</span> <span style="color: #e6db74">&#39; &#39;</span> <span style="color: #f92672">+</span>
+                                    <span style="color: #f8f8f2">emp_hours_worked</span> <span style="color: #f92672">+</span>
+                                    <span style="color: #e6db74">&#39;</span><span style="color: #ae81ff">\n</span><span style="color: #e6db74">&#39;</span>
+                                    <span style="color: #f8f8f2">)</span>
+                    <span style="color: #66d9ef">continue</span>
+                <span style="color: #75715e"># write the lines into temp.txt</span>
+                <span style="color: #f8f8f2">temp_file</span><span style="color: #f92672">.</span><span style="color: #f8f8f2">write(line)</span>
+            <span style="color: #f8f8f2">print(</span><span style="color: #e6db74">&#39;</span><span style="color: #ae81ff">\n</span><span style="color: #e6db74">File written to...&#39;</span><span style="color: #f8f8f2">)</span>
+        <span style="color: #75715e"># remove the employees.txt file because all data is transferred to</span>
+        <span style="color: #75715e"># temp.txt</span>
+        <span style="color: #f8f8f2">os</span><span style="color: #f92672">.</span><span style="color: #f8f8f2">remove(</span><span style="color: #e6db74">&#39;employees.txt&#39;</span><span style="color: #f8f8f2">)</span>
+        <span style="color: #75715e"># rename temp.txt to employees.txt because that is our main file and</span>
+        <span style="color: #75715e"># data has been modified</span>
+        <span style="color: #f8f8f2">os</span><span style="color: #f92672">.</span><span style="color: #f8f8f2">rename(</span><span style="color: #e6db74">&#39;temp.txt&#39;</span><span style="color: #f8f8f2">,</span> <span style="color: #e6db74">&#39;employees.txt&#39;</span><span style="color: #f8f8f2">)</span>
+    <span style="color: #66d9ef">except</span> <span style="color: #f8f8f2">FileNotFoundError:</span>
+        <span style="color: #f8f8f2">print(</span><span style="color: #e6db74">&quot;Error: File not found.&quot;</span><span style="color: #f8f8f2">)</span>
+
+
+<span style="color: #66d9ef">def</span> <span style="color: #a6e22e">delete_emp</span><span style="color: #f8f8f2">():</span>
+    <span style="color: #e6db74">&#39;&#39;&#39;</span>
+<span style="color: #e6db74">    delete record data from the file</span>
+<span style="color: #e6db74">    &#39;&#39;&#39;</span>
+    <span style="color: #f8f8f2">menu_name</span> <span style="color: #f92672">=</span> <span style="color: #e6db74">&#39; &#39;</span> <span style="color: #f92672">*</span> <span style="color: #f8f8f2">int(OFFSET</span> <span style="color: #f92672">/</span> <span style="color: #ae81ff">2</span><span style="color: #f8f8f2">)</span> <span style="color: #f92672">+</span> <span style="color: #e6db74">&quot;DELETE EMPLOYEE&quot;</span>
+    <span style="color: #f8f8f2">dotted</span> <span style="color: #f92672">=</span> <span style="color: #f8f8f2">(OFFSET</span> <span style="color: #f92672">+</span> <span style="color: #f8f8f2">len(menu_name))</span> <span style="color: #f92672">*</span> <span style="color: #e6db74">&#39;-&#39;</span>
+    <span style="color: #f8f8f2">print(</span><span style="color: #e6db74">&#39;{} </span><span style="color: #ae81ff">\n</span><span style="color: #e6db74">{} </span><span style="color: #ae81ff">\n</span><span style="color: #e6db74">{}&#39;</span><span style="color: #f92672">.</span><span style="color: #f8f8f2">format(dotted,</span> <span style="color: #f8f8f2">menu_name,</span> <span style="color: #f8f8f2">dotted))</span>
+    <span style="color: #75715e"># get the employee to search for</span>
+    <span style="color: #f8f8f2">search_name</span> <span style="color: #f92672">=</span> <span style="color: #f8f8f2">input(</span><span style="color: #e6db74">&#39;Give me an employee to delete: &#39;</span><span style="color: #f8f8f2">)</span>
+    <span style="color: #66d9ef">try</span><span style="color: #f8f8f2">:</span>
+        <span style="color: #75715e"># opens the employees.txt file for reading and the temp.txt for writing</span>
+        <span style="color: #66d9ef">with</span> <span style="color: #f8f8f2">open(</span><span style="color: #e6db74">&#39;employees.txt&#39;</span><span style="color: #f8f8f2">)</span> <span style="color: #66d9ef">as</span> <span style="color: #f8f8f2">emps_file,</span> \
+                <span style="color: #f8f8f2">open(</span><span style="color: #e6db74">&#39;temp.txt&#39;</span><span style="color: #f8f8f2">,</span> <span style="color: #e6db74">&#39;w&#39;</span><span style="color: #f8f8f2">)</span> <span style="color: #66d9ef">as</span> <span style="color: #f8f8f2">temp_file:</span>
+            <span style="color: #66d9ef">for</span> <span style="color: #f8f8f2">line</span> <span style="color: #f92672">in</span> <span style="color: #f8f8f2">emps_file:</span>  <span style="color: #75715e"># searches line by line for search_name</span>
+                <span style="color: #66d9ef">if</span> <span style="color: #f92672">not</span> <span style="color: #f8f8f2">line:</span>
+                    <span style="color: #66d9ef">continue</span>
+                <span style="color: #f8f8f2">first_name,</span> <span style="color: #f8f8f2">last_name,</span> <span style="color: #f8f8f2">rate,</span> <span style="color: #f8f8f2">hours</span> <span style="color: #f92672">=</span> <span style="color: #f8f8f2">line</span><span style="color: #f92672">.</span><span style="color: #f8f8f2">split()</span>
+                <span style="color: #f8f8f2">name</span> <span style="color: #f92672">=</span> <span style="color: #e6db74">&quot;{} {}&quot;</span><span style="color: #f92672">.</span><span style="color: #f8f8f2">format(first_name,</span> <span style="color: #f8f8f2">last_name)</span>
+                <span style="color: #66d9ef">if</span> <span style="color: #f8f8f2">name</span> <span style="color: #f92672">==</span> <span style="color: #f8f8f2">search_name:</span>  <span style="color: #75715e"># if there is a match</span>
+                    <span style="color: #f8f8f2">print(</span><span style="color: #e6db74">&#39;Employee deleted&#39;</span><span style="color: #f8f8f2">)</span>
+                    <span style="color: #75715e"># print to user that employee was deleted</span>
+                    <span style="color: #66d9ef">continue</span>
+                <span style="color: #75715e"># write the lines into temp.txt</span>
+                <span style="color: #f8f8f2">temp_file</span><span style="color: #f92672">.</span><span style="color: #f8f8f2">write(line)</span>
+            <span style="color: #f8f8f2">print(</span><span style="color: #e6db74">&#39;</span><span style="color: #ae81ff">\n</span><span style="color: #e6db74">File written to...&#39;</span><span style="color: #f8f8f2">)</span>
+        <span style="color: #75715e"># remove the employees.txt file because all data is transferred to</span>
+        <span style="color: #75715e"># temp.txt</span>
+        <span style="color: #f8f8f2">os</span><span style="color: #f92672">.</span><span style="color: #f8f8f2">remove(</span><span style="color: #e6db74">&#39;employees.txt&#39;</span><span style="color: #f8f8f2">)</span>
+        <span style="color: #75715e"># rename temp.txt to employees.txt because that is our main file and</span>
+        <span style="color: #75715e"># data has been modified</span>
+        <span style="color: #f8f8f2">os</span><span style="color: #f92672">.</span><span style="color: #f8f8f2">rename(</span><span style="color: #e6db74">&#39;temp.txt&#39;</span><span style="color: #f8f8f2">,</span> <span style="color: #e6db74">&#39;employees.txt&#39;</span><span style="color: #f8f8f2">)</span>
+    <span style="color: #66d9ef">except</span> <span style="color: #f8f8f2">FileNotFoundError:</span>
+        <span style="color: #f8f8f2">print(</span><span style="color: #e6db74">&quot;Error: File not found.&quot;</span><span style="color: #f8f8f2">)</span>
+
+
+<span style="color: #66d9ef">def</span> <span style="color: #a6e22e">add_emp</span><span style="color: #f8f8f2">():</span>
+    <span style="color: #e6db74">&#39;&#39;&#39;</span>
+<span style="color: #e6db74">    appends record data to the file</span>
+<span style="color: #e6db74">    &#39;&#39;&#39;</span>
+    <span style="color: #f8f8f2">menu_name</span> <span style="color: #f92672">=</span> <span style="color: #e6db74">&#39; &#39;</span> <span style="color: #f92672">*</span> <span style="color: #f8f8f2">int(OFFSET</span> <span style="color: #f92672">/</span> <span style="color: #ae81ff">2</span><span style="color: #f8f8f2">)</span> <span style="color: #f92672">+</span> <span style="color: #e6db74">&quot;ADD EMPLOYEE&quot;</span>
+    <span style="color: #f8f8f2">dotted</span> <span style="color: #f92672">=</span> <span style="color: #f8f8f2">(OFFSET</span> <span style="color: #f92672">+</span> <span style="color: #f8f8f2">len(menu_name))</span> <span style="color: #f92672">*</span> <span style="color: #e6db74">&#39;-&#39;</span>
+    <span style="color: #f8f8f2">print(</span><span style="color: #e6db74">&#39;{} </span><span style="color: #ae81ff">\n</span><span style="color: #e6db74">{} </span><span style="color: #ae81ff">\n</span><span style="color: #e6db74">{}&#39;</span><span style="color: #f92672">.</span><span style="color: #f8f8f2">format(dotted,</span> <span style="color: #f8f8f2">menu_name,</span> <span style="color: #f8f8f2">dotted))</span>
+    <span style="color: #66d9ef">try</span><span style="color: #f8f8f2">:</span>
+        <span style="color: #75715e"># open file for appending</span>
+        <span style="color: #66d9ef">with</span> <span style="color: #f8f8f2">open(</span><span style="color: #e6db74">&#39;employees.txt&#39;</span><span style="color: #f8f8f2">,</span> <span style="color: #e6db74">&#39;a+&#39;</span><span style="color: #f8f8f2">)</span> <span style="color: #66d9ef">as</span> <span style="color: #f8f8f2">emps_file:</span>
+            <span style="color: #75715e"># get user inputs</span>
+            <span style="color: #f8f8f2">emp_first_name</span> <span style="color: #f92672">=</span> <span style="color: #f8f8f2">input(</span><span style="color: #e6db74">&quot;Enter first name: &quot;</span><span style="color: #f8f8f2">)</span>
+            <span style="color: #f8f8f2">emp_last_name</span> <span style="color: #f92672">=</span> <span style="color: #f8f8f2">input(</span><span style="color: #e6db74">&quot;Enter last name: &quot;</span><span style="color: #f8f8f2">)</span>
+            <span style="color: #f8f8f2">emp_pay_rate</span> <span style="color: #f92672">=</span> <span style="color: #f8f8f2">input(</span><span style="color: #e6db74">&quot;Enter rate of pay: &quot;</span><span style="color: #f8f8f2">)</span>
+            <span style="color: #f8f8f2">emp_hours_worked</span> <span style="color: #f92672">=</span> <span style="color: #f8f8f2">input(</span><span style="color: #e6db74">&quot;Enter hours worked: &quot;</span><span style="color: #f8f8f2">)</span>
+
+            <span style="color: #75715e"># write data to end of file</span>
+            <span style="color: #f8f8f2">emps_file</span><span style="color: #f92672">.</span><span style="color: #f8f8f2">write(</span><span style="color: #e6db74">&#39;</span><span style="color: #ae81ff">\n</span><span style="color: #e6db74">&#39;</span> <span style="color: #f92672">+</span> <span style="color: #f8f8f2">emp_first_name</span> <span style="color: #f92672">+</span> <span style="color: #e6db74">&#39; &#39;</span> <span style="color: #f92672">+</span>
+                            <span style="color: #f8f8f2">emp_last_name</span> <span style="color: #f92672">+</span> <span style="color: #e6db74">&#39; &#39;</span> <span style="color: #f92672">+</span>
+                            <span style="color: #f8f8f2">emp_pay_rate</span> <span style="color: #f92672">+</span> <span style="color: #e6db74">&#39; &#39;</span> <span style="color: #f92672">+</span>
+                            <span style="color: #f8f8f2">emp_hours_worked</span>
+                            <span style="color: #f8f8f2">)</span>
+            <span style="color: #f8f8f2">print(</span><span style="color: #e6db74">&#39;</span><span style="color: #ae81ff">\n</span><span style="color: #e6db74">Employee {} {} added!</span><span style="color: #ae81ff">\n</span><span style="color: #e6db74">&#39;</span><span style="color: #f92672">.</span><span style="color: #f8f8f2">format(</span>
+                <span style="color: #f8f8f2">emp_first_name,</span> <span style="color: #f8f8f2">emp_last_name))</span>
+            <span style="color: #f8f8f2">print(</span><span style="color: #e6db74">&#39;</span><span style="color: #ae81ff">\n</span><span style="color: #e6db74">File written to...&#39;</span><span style="color: #f8f8f2">)</span>
+    <span style="color: #66d9ef">except</span> <span style="color: #f8f8f2">FileNotFoundError:</span>
+        <span style="color: #f8f8f2">print(</span><span style="color: #e6db74">&quot;Error: File not found.&quot;</span><span style="color: #f8f8f2">)</span>
+
+
+<span style="color: #66d9ef">def</span> <span style="color: #a6e22e">print_emp</span><span style="color: #f8f8f2">():</span>
+    <span style="color: #e6db74">&#39;&#39;&#39;</span>
+<span style="color: #e6db74">    displays only a single employee&#39;s data chosen by the user</span>
+<span style="color: #e6db74">    formatted as: firstname, lastname, grosspay (on one line of output)</span>
+<span style="color: #e6db74">    &#39;&#39;&#39;</span>
+    <span style="color: #f8f8f2">menu_name</span> <span style="color: #f92672">=</span> <span style="color: #e6db74">&#39; &#39;</span> <span style="color: #f92672">*</span> <span style="color: #f8f8f2">int(OFFSET</span> <span style="color: #f92672">/</span> <span style="color: #ae81ff">2</span><span style="color: #f8f8f2">)</span> <span style="color: #f92672">+</span> <span style="color: #e6db74">&quot;EMPLOYEE LOOKUP&quot;</span>
+    <span style="color: #f8f8f2">dotted</span> <span style="color: #f92672">=</span> <span style="color: #f8f8f2">(OFFSET</span> <span style="color: #f92672">+</span> <span style="color: #f8f8f2">len(menu_name))</span> <span style="color: #f92672">*</span> <span style="color: #e6db74">&#39;-&#39;</span>
+    <span style="color: #f8f8f2">print(</span><span style="color: #e6db74">&#39;{} </span><span style="color: #ae81ff">\n</span><span style="color: #e6db74">{} </span><span style="color: #ae81ff">\n</span><span style="color: #e6db74">{}&#39;</span><span style="color: #f92672">.</span><span style="color: #f8f8f2">format(dotted,</span> <span style="color: #f8f8f2">menu_name,</span> <span style="color: #f8f8f2">dotted))</span>
+    <span style="color: #75715e"># get user input</span>
+    <span style="color: #f8f8f2">search_name</span> <span style="color: #f92672">=</span> <span style="color: #f8f8f2">input(</span><span style="color: #e6db74">&#39;Give me an employee to search for: &#39;</span><span style="color: #f8f8f2">)</span>
+    <span style="color: #66d9ef">try</span><span style="color: #f8f8f2">:</span>
+        <span style="color: #75715e"># open file for reading</span>
+        <span style="color: #66d9ef">with</span> <span style="color: #f8f8f2">open(</span><span style="color: #e6db74">&#39;employees.txt&#39;</span><span style="color: #f8f8f2">)</span> <span style="color: #66d9ef">as</span> <span style="color: #f8f8f2">emps_file:</span>
+            <span style="color: #66d9ef">for</span> <span style="color: #f8f8f2">line</span> <span style="color: #f92672">in</span> <span style="color: #f8f8f2">emps_file:</span>
+                <span style="color: #66d9ef">if</span> <span style="color: #f92672">not</span> <span style="color: #f8f8f2">line:</span>
+                    <span style="color: #66d9ef">continue</span>
+                <span style="color: #f8f8f2">first_name,</span> <span style="color: #f8f8f2">last_name,</span> <span style="color: #f8f8f2">rate,</span> <span style="color: #f8f8f2">hours</span> <span style="color: #f92672">=</span> <span style="color: #f8f8f2">line</span><span style="color: #f92672">.</span><span style="color: #f8f8f2">split()</span>
+                <span style="color: #f8f8f2">name</span> <span style="color: #f92672">=</span> <span style="color: #e6db74">&quot;{} {}&quot;</span><span style="color: #f92672">.</span><span style="color: #f8f8f2">format(first_name,</span> <span style="color: #f8f8f2">last_name)</span>
+                <span style="color: #f8f8f2">rate,</span> <span style="color: #f8f8f2">hours</span> <span style="color: #f92672">=</span> <span style="color: #f8f8f2">map(float,</span> <span style="color: #f8f8f2">(rate,</span> <span style="color: #f8f8f2">hours))</span>
+                <span style="color: #66d9ef">if</span> <span style="color: #f8f8f2">name</span> <span style="color: #f92672">==</span> <span style="color: #f8f8f2">search_name:</span>  <span style="color: #75715e"># if there is a match</span>
+                    <span style="color: #75715e"># print the employee out</span>
+                    <span style="color: #f8f8f2">print(</span><span style="color: #e6db74">&#39;</span><span style="color: #ae81ff">\n</span><span style="color: #e6db74">Employee {} found!</span><span style="color: #ae81ff">\n</span><span style="color: #e6db74">&#39;</span><span style="color: #f92672">.</span><span style="color: #f8f8f2">format(name))</span>
+                    <span style="color: #f8f8f2">print(</span><span style="color: #e6db74">&#39;FIRST NAME - LAST NAME - GROSS PAY&#39;</span><span style="color: #f8f8f2">)</span>
+                    <span style="color: #f8f8f2">print(</span><span style="color: #e6db74">&quot;{} ${:4.2f}&quot;</span><span style="color: #f92672">.</span><span style="color: #f8f8f2">format(name,</span> <span style="color: #f8f8f2">rate</span> <span style="color: #f92672">*</span> <span style="color: #f8f8f2">hours))</span>
+                    <span style="color: #f8f8f2">print(dotted)</span>
+                    <span style="color: #66d9ef">break</span>
+            <span style="color: #66d9ef">else</span><span style="color: #f8f8f2">:</span>
+                <span style="color: #75715e"># informs user employee not in employees.txt</span>
+                <span style="color: #f8f8f2">print(</span><span style="color: #e6db74">&#39;Employee {} could not be found&#39;</span><span style="color: #f92672">.</span><span style="color: #f8f8f2">format(search_name))</span>
+    <span style="color: #66d9ef">except</span> <span style="color: #f8f8f2">FileNotFoundError:</span>
+        <span style="color: #f8f8f2">print(</span><span style="color: #e6db74">&quot;Error: File not found.&quot;</span><span style="color: #f8f8f2">)</span>
+
+
+<span style="color: #66d9ef">def</span> <span style="color: #a6e22e">print_all_emps</span><span style="color: #f8f8f2">():</span>
+    <span style="color: #e6db74">&#39;&#39;&#39;</span>
+<span style="color: #e6db74">    displays all employee data in format:</span>
+<span style="color: #e6db74">    firstname, lastname, grosspay (on one line of output per employee)</span>
+<span style="color: #e6db74">    &#39;&#39;&#39;</span>
+    <span style="color: #f8f8f2">menu_name</span> <span style="color: #f92672">=</span> <span style="color: #e6db74">&#39; &#39;</span> <span style="color: #f92672">*</span> <span style="color: #f8f8f2">int(OFFSET</span> <span style="color: #f92672">/</span> <span style="color: #ae81ff">2</span><span style="color: #f8f8f2">)</span> <span style="color: #f92672">+</span> <span style="color: #e6db74">&quot;EMPLOYEE LIST&quot;</span>
+    <span style="color: #f8f8f2">dotted</span> <span style="color: #f92672">=</span> <span style="color: #f8f8f2">(OFFSET</span> <span style="color: #f92672">+</span> <span style="color: #f8f8f2">len(menu_name))</span> <span style="color: #f92672">*</span> <span style="color: #e6db74">&#39;-&#39;</span>
+    <span style="color: #f8f8f2">print(</span><span style="color: #e6db74">&#39;{} </span><span style="color: #ae81ff">\n</span><span style="color: #e6db74">{} </span><span style="color: #ae81ff">\n</span><span style="color: #e6db74">{}&#39;</span><span style="color: #f92672">.</span><span style="color: #f8f8f2">format(dotted,</span> <span style="color: #f8f8f2">menu_name,</span> <span style="color: #f8f8f2">dotted))</span>
+    <span style="color: #66d9ef">try</span><span style="color: #f8f8f2">:</span>
+        <span style="color: #75715e"># opens employees.txt for reading</span>
+        <span style="color: #66d9ef">with</span> <span style="color: #f8f8f2">open(</span><span style="color: #e6db74">&#39;employees.txt&#39;</span><span style="color: #f8f8f2">)</span> <span style="color: #66d9ef">as</span> <span style="color: #f8f8f2">emps_file:</span>
+            <span style="color: #f8f8f2">print(</span><span style="color: #e6db74">&#39;FIRST NAME - LAST NAME - GROSS PAY&#39;</span><span style="color: #f8f8f2">)</span>
+            <span style="color: #66d9ef">for</span> <span style="color: #f8f8f2">line</span> <span style="color: #f92672">in</span> <span style="color: #f8f8f2">emps_file:</span>
+                <span style="color: #75715e"># goes line by line, prints each line</span>
+                <span style="color: #f8f8f2">first_name,</span> <span style="color: #f8f8f2">last_name,</span> <span style="color: #f8f8f2">rate,</span> <span style="color: #f8f8f2">hours</span> <span style="color: #f92672">=</span> <span style="color: #f8f8f2">line</span><span style="color: #f92672">.</span><span style="color: #f8f8f2">split()</span>
+                <span style="color: #f8f8f2">name</span> <span style="color: #f92672">=</span> <span style="color: #e6db74">&quot;{} {}&quot;</span><span style="color: #f92672">.</span><span style="color: #f8f8f2">format(first_name,</span> <span style="color: #f8f8f2">last_name)</span>
+                <span style="color: #f8f8f2">rate,</span> <span style="color: #f8f8f2">hours</span> <span style="color: #f92672">=</span> <span style="color: #f8f8f2">map(float,</span> <span style="color: #f8f8f2">(rate,</span> <span style="color: #f8f8f2">hours))</span>
+                <span style="color: #f8f8f2">print(</span><span style="color: #e6db74">&quot;{} ${:4.2f}&quot;</span><span style="color: #f92672">.</span><span style="color: #f8f8f2">format(name,</span> <span style="color: #f8f8f2">rate</span> <span style="color: #f92672">*</span> <span style="color: #f8f8f2">hours))</span>
+            <span style="color: #f8f8f2">print(dotted)</span>
+    <span style="color: #66d9ef">except</span> <span style="color: #f8f8f2">FileNotFoundError:</span>
+        <span style="color: #f8f8f2">print(</span><span style="color: #e6db74">&quot;Error: File not found.&quot;</span><span style="color: #f8f8f2">)</span>
+
+
+<span style="color: #66d9ef">def</span> <span style="color: #a6e22e">print_menu</span><span style="color: #f8f8f2">():</span>
+    <span style="color: #e6db74">&#39;&#39;&#39;</span>
+<span style="color: #e6db74">    display the main menu options</span>
+<span style="color: #e6db74">    &#39;&#39;&#39;</span>
+    <span style="color: #f8f8f2">menu_name</span> <span style="color: #f92672">=</span> <span style="color: #e6db74">&#39; &#39;</span> <span style="color: #f92672">*</span> <span style="color: #f8f8f2">int(OFFSET</span> <span style="color: #f92672">/</span> <span style="color: #ae81ff">2</span><span style="color: #f8f8f2">)</span> <span style="color: #f92672">+</span> <span style="color: #e6db74">&quot;MENU&quot;</span>
+    <span style="color: #f8f8f2">dotted</span> <span style="color: #f92672">=</span> <span style="color: #f8f8f2">(OFFSET</span> <span style="color: #f92672">+</span> <span style="color: #f8f8f2">len(menu_name))</span> <span style="color: #f92672">*</span> <span style="color: #e6db74">&#39;-&#39;</span>
+    <span style="color: #75715e"># menu options are contained in a list</span>
+    <span style="color: #f8f8f2">options</span> <span style="color: #f92672">=</span> <span style="color: #f8f8f2">[</span>
+        <span style="color: #e6db74">&quot;Payroll report for all employees&quot;</span><span style="color: #f8f8f2">,</span>
+        <span style="color: #e6db74">&quot;Payroll report for a single employee&quot;</span><span style="color: #f8f8f2">,</span>
+        <span style="color: #e6db74">&quot;Add an employee&quot;</span><span style="color: #f8f8f2">,</span>
+        <span style="color: #e6db74">&quot;Delete an employee&quot;</span><span style="color: #f8f8f2">,</span>
+        <span style="color: #e6db74">&quot;Modify an employee&quot;</span><span style="color: #f8f8f2">,</span>
+        <span style="color: #e6db74">&quot;Exit&quot;</span><span style="color: #f8f8f2">]</span>
+    <span style="color: #f8f8f2">print(</span><span style="color: #e6db74">&#39;{} </span><span style="color: #ae81ff">\n</span><span style="color: #e6db74">{} </span><span style="color: #ae81ff">\n</span><span style="color: #e6db74">{}&#39;</span><span style="color: #f92672">.</span><span style="color: #f8f8f2">format(dotted,</span> <span style="color: #f8f8f2">menu_name,</span> <span style="color: #f8f8f2">dotted))</span>
+    <span style="color: #75715e"># for loop prints each item in the list &#39;options&#39; and numbers them</span>
+    <span style="color: #66d9ef">for</span> <span style="color: #f8f8f2">i,</span> <span style="color: #f8f8f2">opt</span> <span style="color: #f92672">in</span> <span style="color: #f8f8f2">enumerate(options):</span>
+        <span style="color: #f8f8f2">print(i</span> <span style="color: #f92672">+</span> <span style="color: #ae81ff">1</span><span style="color: #f8f8f2">,</span> <span style="color: #f8f8f2">opt)</span>
+    <span style="color: #f8f8f2">print(dotted)</span>
+
+
+<span style="color: #66d9ef">def</span> <span style="color: #a6e22e">run_again</span><span style="color: #f8f8f2">():</span>
+    <span style="color: #e6db74">&#39;&#39;&#39;</span>
+<span style="color: #e6db74">    loop that asks the user if they want to run the program again,</span>
+<span style="color: #e6db74">    exits the program if they dont want to</span>
+<span style="color: #e6db74">    &#39;&#39;&#39;</span>
+    <span style="color: #66d9ef">while</span> <span style="color: #66d9ef">True</span><span style="color: #f8f8f2">:</span>
+        <span style="color: #f8f8f2">choice</span> <span style="color: #f92672">=</span> <span style="color: #f8f8f2">input(</span><span style="color: #e6db74">&#39;</span><span style="color: #ae81ff">\n</span><span style="color: #e6db74">Want to run the program again? [Y/N]: &#39;</span><span style="color: #f8f8f2">)</span>
+        <span style="color: #66d9ef">if</span> <span style="color: #f8f8f2">choice</span> <span style="color: #f92672">==</span> <span style="color: #e6db74">&#39;Y&#39;</span> <span style="color: #f92672">or</span> <span style="color: #f8f8f2">choice</span> <span style="color: #f92672">==</span> <span style="color: #e6db74">&#39;y&#39;</span><span style="color: #f8f8f2">:</span>
+            <span style="color: #f8f8f2">main()</span>
+            <span style="color: #66d9ef">break</span>
+        <span style="color: #66d9ef">elif</span> <span style="color: #f8f8f2">choice</span> <span style="color: #f92672">==</span> <span style="color: #e6db74">&#39;N&#39;</span> <span style="color: #f92672">or</span> <span style="color: #f8f8f2">choice</span> <span style="color: #f92672">==</span> <span style="color: #e6db74">&#39;n&#39;</span><span style="color: #f8f8f2">:</span>
+            <span style="color: #f8f8f2">print(</span><span style="color: #e6db74">&quot;Goodbye!</span><span style="color: #ae81ff">\n</span><span style="color: #e6db74">&quot;</span><span style="color: #f8f8f2">)</span>
+            <span style="color: #f8f8f2">sys</span><span style="color: #f92672">.</span><span style="color: #f8f8f2">exit(</span><span style="color: #ae81ff">0</span><span style="color: #f8f8f2">)</span>
+
+        <span style="color: #f8f8f2">print(</span><span style="color: #e6db74">&quot;Error! Invalid input. Press any key to continue...</span><span style="color: #ae81ff">\n</span><span style="color: #e6db74">&quot;</span><span style="color: #f8f8f2">)</span>
+
+
+<span style="color: #66d9ef">def</span> <span style="color: #a6e22e">main</span><span style="color: #f8f8f2">():</span>
+    <span style="color: #e6db74">&#39;&#39;&#39;</span>
+<span style="color: #e6db74">    prints the program info and main menu</span>
+<span style="color: #e6db74">    calls the other functions here based on user choice</span>
+<span style="color: #e6db74">    &#39;&#39;&#39;</span>
+    <span style="color: #f8f8f2">print(PROGRAM_INFO)</span>
+    <span style="color: #f8f8f2">print_menu()</span>
+    <span style="color: #66d9ef">while</span> <span style="color: #66d9ef">True</span><span style="color: #f8f8f2">:</span>
+        <span style="color: #f8f8f2">menu_choice</span> <span style="color: #f92672">=</span> <span style="color: #f8f8f2">input(</span><span style="color: #e6db74">&quot;</span><span style="color: #ae81ff">\n</span><span style="color: #e6db74">Enter your choice[1-6]: &quot;</span><span style="color: #f8f8f2">)</span>
+        <span style="color: #66d9ef">if</span> <span style="color: #f8f8f2">menu_choice</span> <span style="color: #f92672">==</span> <span style="color: #e6db74">&#39;1&#39;</span><span style="color: #f8f8f2">:</span>
+            <span style="color: #f8f8f2">print_all_emps()</span>
+            <span style="color: #f8f8f2">run_again()</span>
+            <span style="color: #66d9ef">break</span>
+        <span style="color: #66d9ef">elif</span> <span style="color: #f8f8f2">menu_choice</span> <span style="color: #f92672">==</span> <span style="color: #e6db74">&#39;2&#39;</span><span style="color: #f8f8f2">:</span>
+            <span style="color: #f8f8f2">print_emp()</span>
+            <span style="color: #f8f8f2">run_again()</span>
+            <span style="color: #66d9ef">break</span>
+        <span style="color: #66d9ef">elif</span> <span style="color: #f8f8f2">menu_choice</span> <span style="color: #f92672">==</span> <span style="color: #e6db74">&#39;3&#39;</span><span style="color: #f8f8f2">:</span>
+            <span style="color: #f8f8f2">add_emp()</span>
+            <span style="color: #f8f8f2">run_again()</span>
+            <span style="color: #66d9ef">break</span>
+        <span style="color: #66d9ef">elif</span> <span style="color: #f8f8f2">menu_choice</span> <span style="color: #f92672">==</span> <span style="color: #e6db74">&#39;4&#39;</span><span style="color: #f8f8f2">:</span>
+            <span style="color: #f8f8f2">delete_emp()</span>
+            <span style="color: #f8f8f2">run_again()</span>
+            <span style="color: #66d9ef">break</span>
+        <span style="color: #66d9ef">elif</span> <span style="color: #f8f8f2">menu_choice</span> <span style="color: #f92672">==</span> <span style="color: #e6db74">&#39;5&#39;</span><span style="color: #f8f8f2">:</span>
+            <span style="color: #f8f8f2">modify_emp()</span>
+            <span style="color: #f8f8f2">run_again()</span>
+            <span style="color: #66d9ef">break</span>
+        <span style="color: #66d9ef">elif</span> <span style="color: #f8f8f2">menu_choice</span> <span style="color: #f92672">==</span> <span style="color: #e6db74">&#39;6&#39;</span><span style="color: #f8f8f2">:</span>
+            <span style="color: #f8f8f2">print(</span><span style="color: #e6db74">&quot;Goodbye!</span><span style="color: #ae81ff">\n</span><span style="color: #e6db74">&quot;</span><span style="color: #f8f8f2">)</span>
+            <span style="color: #66d9ef">break</span>
+
+        <span style="color: #f8f8f2">print(</span><span style="color: #e6db74">&quot;Error! Invalid input. Press any key to continue...</span><span style="color: #ae81ff">\n</span><span style="color: #e6db74">&quot;</span><span style="color: #f8f8f2">)</span>
+
+<span style="color: #66d9ef">if</span> <span style="color: #f8f8f2">__name__</span> <span style="color: #f92672">==</span> <span style="color: #e6db74">&#39;__main__&#39;</span><span style="color: #f8f8f2">:</span>
+    <span style="color: #f8f8f2">main()</span>
+</pre></div>
+
+
+                </div>
+            </div>
+        </div>
     </div>
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
