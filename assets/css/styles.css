@@ -1,7 +1,21 @@
+/*
+COLOR SCHEME
+---------------
+RED         #A92F41     (hover link color)
+YELLOW      #E5DFC5     (title)
+BROWN       #B48375     (title hashtag)
+GREEN       #91C7A9     (link color)
+BLACK       #222222     (background color)
+
+*/
+
 body {
-    font-family: "Courier New", "Helvetica Neue", Helvetica, Arial, sans-serif;
-    background: #252120;
+    font-family: 'Fira Mono', Consolas, "Courier New", Courier, Arial, sans-serif;
+    /*    background: #252120;*/
+    background: #222222;
     color: #fff;
+    font-size: 16px;
+    font-weight: bold;
 }
 
 hr {
@@ -21,17 +35,20 @@ a:hover,
 blockquote {
     font-size: inherit;
     display: block;
-    border-color: #252120;
+    border-left: 5px solid #fff;
+    /*    border-color: #222222;*/
+    /*
     margin-top: 1em;
     margin-bottom: 1em;
-    margin-left: 40px;
-    margin-right: 40px;
+*/
+    /*    margin-left: 40px;*/
+    /*    margin-right: 40px;*/
 }
 
 pre {
-    background: #252120;
+    background: #222222;
     color: #fff;
-    border-color: #252120;
+    border-color: #222222;
 }
 
 #intro_div {
@@ -49,8 +66,8 @@ pre {
 }
 
 .navbar-default {
-    background-color: #252120;
-    border-color: #252120;
+    background: rgb(34, 34, 34);
+    border-color: #222222;
     text-align: center;
 }
 
@@ -68,7 +85,7 @@ pre {
 .navbar-default .navbar-nav>.open>a:focus,
 .navbar-default .navbar-nav>.open>a:hover {
     color: #A92F41;
-    background-color: #252120;
+    background: #222222;
 }
 
 .dropdown-menu {
@@ -85,12 +102,10 @@ pre {
     text-align: left;
     list-style: none;
     background-color: transparent;
-    -webkit-background-clip: padding-box;
     background-clip: padding-box;
     border: 1px solid #ccc;
     border: 1px solid rgba(0, 0, 0, .15);
     border-radius: 4px;
-    -webkit-box-shadow: 0 6px 12px rgba(0, 0, 0, .175);
     box-shadow: 0 6px 12px rgba(0, 0, 0, .175);
 }
 
@@ -102,14 +117,14 @@ pre {
     line-height: 1.42857143;
     color: #fff;
     white-space: nowrap;
-    background-color: #252120;
+    background-color: #222222;
 }
 
 .dropdown-menu > li > a:hover,
 .dropdown-menu > li > a:focus {
     color: #A92F41;
     text-decoration: none;
-    background-color: #252120;
+    background-color: #222222;
 }
 
 .dropdown-menu > .active > a,
@@ -117,7 +132,7 @@ pre {
 .dropdown-menu > .active > a:focus {
     color: #fff;
     text-decoration: none;
-    background-color: #252120;
+    background-color: #222222;
     outline: 0;
 }
 
@@ -127,19 +142,19 @@ ul > #favProgramList > .list-group > li > .list-group-item {
 
 .list-group-item {
     color: #fff;
-    background-color: #252120;
-    border-color: #252120;
+    background-color: #222222;
+    border-color: #222222;
 }
 
 @media (max-width: 767px) {
     .navbar-default .navbar-nav .open .dropdown-menu > li > a {
         color: #fff;
-        border-color: #252120;
+        border-color: #222222;
     }
     .navbar-default .navbar-nav .open .dropdown-menu > li > a:hover {
         color: #A92F41;
         text-decoration: none;
-        background-color: #252120;
+        background-color: #222222;
     }
 }
 
@@ -148,7 +163,7 @@ ul > #favProgramList > .list-group > li > .list-group-item {
 }
 
 #collapse-btn {
-    background-color: #252120;
+    background-color: #222222;
 }
 
 span:hover,
@@ -163,15 +178,25 @@ span:focus {
 
 .navbar-default .navbar-collapse,
 .navbar-default .navbar-form {
-    border-color: #252120;
-    background-color: #252120;
+    border-color: #222222;
+    background-color: #222222;
 }
 
 .navbar-default .navbar-toggle {
     width: 100%;
     float: none;
     margin-right: 0;
-    border-color: #252120;
+    border-color: #222222;
+}
+
+.col-lg-12 h4,
+.col-lg-6 h4 {
+    color: #E5DFC5;
+}
+
+.col-lg-12 h4 span,
+.col-lg-6 h4 span {
+    color: #B48375;
 }
 
 
@@ -180,3 +205,16 @@ span:focus {
 .navbar-default .navbar-toggle > span:active{
 color: #A92F41;
 }*/
+
+.col-lg-12 p {
+    margin-left: 35px;
+}
+
+.col-lg-12 blockquote {
+    margin-left: 35px;
+}
+
+h1 span,
+h1 span:hover {
+    color: #A92F41;
+}
