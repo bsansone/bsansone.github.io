@@ -15,7 +15,7 @@ body {
     background: #222222;
     color: #fff;
     font-size: 16px;
-    font-weight: bold;
+    font-weight: 700;
 }
 
 hr {
@@ -43,6 +43,10 @@ blockquote {
 */
     /*    margin-left: 40px;*/
     /*    margin-right: 40px;*/
+}
+
+p {
+    line-height: 30px;
 }
 
 pre {
@@ -89,6 +93,7 @@ pre {
 }
 
 .dropdown-menu {
+    font-size: 16px;
     position: absolute;
     top: 100%;
     left: 0;
@@ -98,7 +103,6 @@ pre {
     min-width: 160px;
     padding: 5px 0;
     margin: 2px 0 0;
-    font-size: 14px;
     text-align: left;
     list-style: none;
     background-color: transparent;
@@ -113,7 +117,6 @@ pre {
     display: block;
     padding: 3px 20px;
     clear: both;
-    font-weight: normal;
     line-height: 1.42857143;
     color: #fff;
     white-space: nowrap;
@@ -141,6 +144,7 @@ ul > #favProgramList > .list-group > li > .list-group-item {
 }
 
 .list-group-item {
+    font-weight: bold;
     color: #fff;
     background-color: #222222;
     border-color: #222222;
@@ -192,11 +196,13 @@ span:focus {
 .col-lg-12 h4,
 .col-lg-6 h4 {
     color: #E5DFC5;
+    font-weight: 700;
 }
 
 .col-lg-12 h4 span,
 .col-lg-6 h4 span {
     color: #B48375;
+    font-weight: 700;
 }
 
 
