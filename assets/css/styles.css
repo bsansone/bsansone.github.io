@@ -32,6 +32,13 @@ a:hover,
     color: #91C7A9;
 }
 
+.btn,
+.btn-default {
+    font-family: 'Fira Mono', Consolas, "Courier New", Courier, Arial, sans-serif;
+    font-size: 16px;
+    font-weight: 700;
+}
+
 blockquote {
     font-size: inherit;
     display: block;
@@ -144,6 +151,7 @@ ul > #favProgramList > .list-group > li > .list-group-item {
 }
 
 .list-group-item {
+    line-height: 30px;
     font-weight: bold;
     color: #fff;
     background-color: #222222;
@@ -212,12 +220,12 @@ span:focus {
 color: #A92F41;
 }*/
 
-.col-lg-12 p {
+.text-left p {
     margin-left: 35px;
 }
 
-.col-lg-12 blockquote {
-    margin-left: 35px;
+.col-lg-6 blockquote {
+    margin-left: 30px;
 }
 
 h1 span,
