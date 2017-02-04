@@ -18,11 +18,13 @@
             <p>Currently under development...</p>
         </section>
     </main>
-
     <script>
         !function(a,b,c,d,e,f,g){a.GoogleAnalyticsObject=e,a[e]=a[e]||function(){(a[e].q=a[e].q||[]).push(arguments)},a[e].l=1*new Date,f=b.createElement(c),g=b.getElementsByTagName(c)[0],f.async=1,f.src=d,g.parentNode.insertBefore(f,g)}(window,document,"script","https://www.google-analytics.com/analytics.js","ga"),ga("create","UA-79851636-1","auto"),ga("send","pageview");
     </script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
+    <script type="text/javascript">
+        $(function(){$("section p").hide(0),$("section h1").hide(0).delay(300).fadeIn(3e3,function(){$("section p").delay(200).fadeIn(3e3)})});
+    </script>
 </body>
 
 </html>
