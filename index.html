@@ -12,21 +12,62 @@
 
 <body>
   <main>
-    <section>
-      <article>
-        <p id="contact">contact</p>
-        <p id="email" class="hidden"> &middot; sansonebrandon[at]gmail.com</p>
+    <section class="content">
+      <h1>Brandon Sansone</h1>
+      <article class="intro">
+        <p>Front End Developer at <a href="https://luxurygaragesale.com/" target="_blank">Luxury Garage Sale</a></p>
+        <p>Chicago, IL</p>
+      </article>
+      <article class="about hidden">
+        <section class="school">
+          <header>
+            <h4>Education:</h4>
+          </header>
+          <article>
+            <p>Bachelors of Information Technology and Management</p>
+            <p><a href="http://web.iit.edu/" target="_blank">Illinois Institute of Technology 2016</a></p>
+          </article>
+        </section>
+        <section class="tech">
+          <header>
+            <h4>Tech:</h4>
+          </header>
+          <article>
+            <p>HTML(5), CSS(3), Javascript (React, Node), Flux, Redux</p>
+          </article>
+        </section>
+        <section class="interests">
+          <header>
+            <h4>Interests:</h4>
+          </header>
+          <article>
+            <p>Web Development, Cyber Security, Fitness</p>
+          </article>
+        </section>
+      </article>
+      <article class="contact hidden">
+        <p><a href="https://www.linkedin.com/in/brandonsansone/" target="_blank">Linkedin</a></p>
+        <p><a href="https://github.com/bsansone" target="_blank">Github</a></p>
+        <p>bsansone [at] hawk.iit.edu</p>
       </article>
     </section>
-    <section>
-      <h1>Brandon Sansone</h1>
-      <p>Front End Developer at <a href="https://luxurygaragesale.com/" target="_blank">Luxury Garage Sale</a></p>
-      <p>Chicago, IL</p>
-    </section>
   </main>
+  <footer>
+    <p class="intro">intro</p>
+    <p class="about">about</p>
+    <p class="contact">contact</p>
+  </footer>
   <script>!function(a,b,c,d,e,f,g){a.GoogleAnalyticsObject=e,a[e]=a[e]||function(){(a[e].q=a[e].q||[]).push(arguments)},a[e].l=1*new Date,f=b.createElement(c),g=b.getElementsByTagName(c)[0],f.async=1,f.src=d,g.parentNode.insertBefore(f,g)}(window,document,"script","https://www.google-analytics.com/analytics.js","ga"),ga("create","UA-79851636-1","auto"),ga("send","pageview");</script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
-  <script type="text/javascript">$(function(){var a=document.getElementById('contact'),b=document.getElementById('email');$(a).click(function(){$(b).toggleClass('hidden')})});</script>
+  <script type="text/javascript">
+    $(function(){
+      $('footer p').click(function() {
+        var selectedClass = $(this).attr("class"),
+            test = $("main section article." + selectedClass);
+        $(test).removeClass("hidden").siblings("article").addClass("hidden");
+      });
+    });
+  </script>
 </body>
 
 </html>
