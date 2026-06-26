@@ -49,6 +49,7 @@ main {
   flex: 1;
   flex-direction: column;
   justify-content: center;
+  text-align: center;
 }
 
 main h1 {
